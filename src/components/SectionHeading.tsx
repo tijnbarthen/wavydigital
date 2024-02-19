@@ -19,8 +19,8 @@ const SectionHeading = ({
       viewport={{ once: true, amount: 0.5 }} // Configure when the animation triggers
       className={cn("flex flex-row gap-2 items-center py-8", className)}
     >
-      <CornerDownRight className="h-6 w-6" />
-      <h2 className="text-lg uppercase tracking-tight subpixel-antialiased font-semibold">
+      <CornerDownRight className="h-6 w-6 md:self-center self-start" />
+      <h2 className="text-2xl uppercase tracking-tight subpixel-antialiased font-semibold">
         {title}
       </h2>
     </motion.div>

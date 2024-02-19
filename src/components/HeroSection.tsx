@@ -28,7 +28,7 @@ const HeroSection = () => {
             alt=""
           />
           <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
-            Business Savvy Tech.
+            We build. We grow. We scale.
           </h1>
         </motion.div>
         <div className="flex flex-row gap-4">
@@ -37,14 +37,14 @@ const HeroSection = () => {
             whileInView={{ y: 0, opacity: 1 }} // End at its final position, fully opaque
             transition={{ duration: 0.5, delay: 0.2 }} // Adjust timing and delay here
             viewport={{ once: true, amount: 0.5 }} // Configure when the animation triggers
-            className="lg:h-32 h-20 w-full relative"
+            className="lg:h-32 h-20 w-2/3 relative"
           >
             <img
               src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3JhZGllbnR8ZW58MHx8MHx8fDA%3D"
               className="h-full w-full object-cover rounded-3xl"
               alt=""
             />
-            <h1 className="text-xl md:text-3xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
+            <h1 className="text-lg md:text-3xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
               E-Commerce.
             </h1>
           </motion.div>
@@ -93,7 +93,7 @@ const HeroSection = () => {
             className="lg:h-32 h-20 w-full relative text-center"
           >
             <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
-              Next.js.
+              Business.
             </h1>
             <img
               src="https://images.unsplash.com/photo-1548350896-fafc317d3ceb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGdyYWRpZW50fGVufDB8MHwwfHx8MA%3D%3D"

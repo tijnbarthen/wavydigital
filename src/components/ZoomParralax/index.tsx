@@ -61,7 +61,10 @@ export default function ZoomParallax() {
   return (
     <>
       <MaxWidthWrapper className="py-8">
-        <SectionHeading title="Navigating the digital world can be difficult." />
+        <SectionHeading
+          className="py-20"
+          title="We know that navigating the digital world can be difficult. 🤯"
+        />
       </MaxWidthWrapper>
       <div ref={container} className={styles.container}>
         <div className={styles.sticky}>
@@ -109,7 +112,7 @@ const WaveText = () => {
 
     // Adjust the range values for mobile devices
     if (isMobile) {
-      setXRange(["-50%", "100%"]); // Less movement on mobile
+      setXRange(["-180%", "250%"]); // Less movement on mobile
     } else {
       setXRange(["-200%", "200%"]); // More movement on desktop
     }
