@@ -12,8 +12,20 @@ import {
 import { useRef } from "react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import SectionHeading from "../SectionHeading";
+import Lenis from "@studio-freight/lenis";
 
 export default function ZoomParallax() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -112,9 +124,9 @@ const WaveText = () => {
 
     // Adjust the range values for mobile devices
     if (isMobile) {
-      setXRange(["-180%", "250%"]); // Less movement on mobile
+      setXRange(["-160%", "250%"]); // Less movement on mobile
     } else {
-      setXRange(["-200%", "200%"]); // More movement on desktop
+      setXRange(["-134%", "200%"]); // More movement on desktop
     }
   }, []);
 

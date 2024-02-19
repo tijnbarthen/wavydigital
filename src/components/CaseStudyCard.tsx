@@ -10,10 +10,11 @@ const CaseStudyCard = ({ image }: { image?: string }) => {
     <motion.div
       initial={{ y: 100, opacity: 0 }} // Start off-screen to the left
       whileInView={{ y: 0, opacity: 1 }} // End at its final position, fully opaque
-      transition={{ duration: 0.5, delay: 0.1 }} // Adjust timing and delay here
-      viewport={{ once: true, amount: 0.5 }} // Configure when the animation triggers
+      transition={{ duration: 0.7, delay: 0.1 }} // Adjust timing and delay here
+      viewport={{ once: true, amount: 0.4 }} // Configure when the animation triggers
+      className=""
     >
-      <Card className=" bg-slate-100 p-6 w-full border-none dark:border-2 dark:border-white ">
+      <Card className=" bg-slate-100 p-6 border-none dark:border-2 dark:border-white w-[350px] md:w-[500px]">
         <div className="flex justify-center">
           <img
             src={
