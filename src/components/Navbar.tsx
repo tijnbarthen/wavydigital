@@ -5,6 +5,7 @@ import { Menu, X, Waves } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "./ui/button";
+import { motion } from "framer-motion";
 
 import { usePathname } from "next/navigation";
 
@@ -30,8 +31,8 @@ export default function Navbar({ tokens }: Props) {
   const pathname = usePathname();
 
   return (
-    <header className="bg-white block top-0 inset-x-0 z-50 border-b border-black h-16">
-      <MaxWidthWrapper>
+    <header className=" block top-0 inset-x-0 z-50 border-b border-black h-16">
+      <MaxWidthWrapper className="py-0">
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between sm:justify-none gap-x-6 h-16"
           aria-label="Global"
@@ -76,8 +77,8 @@ export default function Navbar({ tokens }: Props) {
               leaveFrom="translate-y-0"
               leaveTo="-translate-y-full"
             >
-              <Dialog.Panel className="fixed inset-y-0 right-0 z-[100] w-full  overflow-y-auto bg-white px-4 py-0  sm:ring-1 sm:ring-gray-900/10">
-                <MaxWidthWrapper>
+              <Dialog.Panel className="fixed inset-y-0 right-0 z-[100] w-full  overflow-y-auto bg-white dark:bg-black px-4 py-0  sm:ring-1 sm:ring-gray-900/10">
+                <MaxWidthWrapper className="py-0">
                   <div className="flex items-center max-w-7xl justify-between gap-x-6 h-16 top-0 w-full">
                     <Link
                       href="/"
@@ -101,17 +102,28 @@ export default function Navbar({ tokens }: Props) {
                     <div className="-my-6 divide-y divide-gray-500/10">
                       <div className="pt-10 flex flex-col gap-10">
                         {navigation.map((item, index) => (
-                          <Link
-                            onClick={() => setMobileMenuOpen(false)}
+                          <motion.div
                             key={item.name}
-                            href={item.href}
-                            className="border-b border-black flex-1 h-auto flex gap-1 py-2"
+                            initial={{ x: 100, opacity: 0 }} // Start off-screen to the left
+                            whileInView={{ x: 0, opacity: 1 }} // End at its final position, fully opaque
+                            transition={{
+                              duration: 0.5,
+                              delay: (index + 1) * 0.1,
+                            }} // Adjust timing and delay here
+                            viewport={{ once: true, amount: 0.5 }} // Configure when the animation triggers
                           >
-                            <p className="self-start">0{index + 1}</p>
-                            <p className=" text-3xl md:text-5xl font-bold">
-                              {item.name}
-                            </p>
-                          </Link>
+                            <Link
+                              onClick={() => setMobileMenuOpen(false)}
+                              key={item.name}
+                              href={item.href}
+                              className="border-b border-black dark:border-white flex-1 h-auto flex gap-1 py-2"
+                            >
+                              <p className="self-start">0{index + 1}</p>
+                              <p className=" text-3xl md:text-5xl font-bold">
+                                {item.name}
+                              </p>
+                            </Link>
+                          </motion.div>
                         ))}
                       </div>
                       <div className="py-6"></div>
