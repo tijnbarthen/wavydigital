@@ -37,7 +37,7 @@ const Footer = () => {
     <MaxWidthWrapper className="py-8">
       <footer className="bg-black rounded-3xl flex justify-center items-center flex-col gap-16 px-10 py-36 relative">
         <h1 className="font-semibold text-5xl lg:text-7xl text-white text-center">
-          Let's create your next big idea.
+          Let&apos;s create your next big idea.
         </h1>
         <Button
           variant="outline"
