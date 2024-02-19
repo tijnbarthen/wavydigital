@@ -3,12 +3,7 @@
 import styles from "./styles.module.css";
 import image1 from "./image1.png";
 import Image from "next/image";
-import {
-  useScroll,
-  useTransform,
-  motion,
-  useViewportScroll,
-} from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import SectionHeading from "../SectionHeading";
@@ -29,31 +24,31 @@ export default function ZoomParallax() {
   const pictures = [
     {
       id: 1,
-      src: "/image1.png",
+      src: "/image5.jpg",
       scale: scale4,
     },
     {
-      src: "/image1.png",
+      src: "/image9.jpg",
       scale: scale5,
     },
     {
-      src: "/image1.png",
+      src: "/image10.jpg",
       scale: scale6,
     },
     {
-      src: "/image1.png",
+      src: "/image11.jpg",
       scale: scale5,
     },
     {
-      src: "/image1.png",
+      src: "/image6.jpg",
       scale: scale6,
     },
     {
-      src: "/image1.png",
+      src: "/image7.jpg",
       scale: scale8,
     },
     {
-      src: "/image1.png",
+      src: "/image8.jpg",
       scale: scale9,
     },
   ];
@@ -83,12 +78,18 @@ export default function ZoomParallax() {
                       <WaveText />
                     </div>
                   ) : (
-                    <Image
-                      src={src}
-                      fill
-                      alt="image"
-                      className="object-cover"
-                    />
+                    <div className="h-full">
+                      <div className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 flex justify-center mb-10">
+                        {" "}
+                        Wave. After. Wave.{" "}
+                      </div>
+                      <Image
+                        src={src}
+                        fill
+                        alt="image"
+                        className="object-cover"
+                      />
+                    </div>
                   )}
                 </div>
               </motion.div>
