@@ -18,8 +18,8 @@ export default function Paragraph({ WhyUs, paragraph }: ParagraphProps) {
   const { scrollYProgress } = useScroll({
     target: container,
     offset: [
-      `start ${!!WhyUs ? "0.9" : "1"}`,
-      `start ${!!WhyUs ? "0.1" : "0.5"}`,
+      `start ${WhyUs === true ? "1" : "1"}`,
+      `start ${WhyUs === true ? "0.5" : "0.1"}`,
     ],
   });
 
@@ -28,7 +28,7 @@ export default function Paragraph({ WhyUs, paragraph }: ParagraphProps) {
     <p
       ref={container}
       className={`flex text-3xl md:text-6xl max-w-7xl flex-wrap dark:text-white text-black ${
-        !!WhyUs && "pt-10 h-1"
+        WhyUs === true ? "" : "pt-10 h-1"
       }`}
     >
       {words.map((word, i) => {
@@ -60,7 +60,7 @@ const Word = ({ children, progress, range, WhyUs }: WordProps) => {
   const amount = range[1] - range[0];
   const step = amount / children.length;
   return (
-    <span className={`relative mr-4 ${!!WhyUs ?? "top-4"}`}>
+    <span className={`relative mr-4 ${WhyUs === true ? "" : "top-4"}`}>
       {children.split("").map((char, i) => {
         const start = range[0] + i * step;
         const end = range[0] + (i + 1) * step;

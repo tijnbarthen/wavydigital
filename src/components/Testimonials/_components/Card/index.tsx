@@ -51,7 +51,7 @@ const Card = ({
           top: `calc(-5vh + ${i * 25}px)`,
         }}
         className={
-          "flex px-8 md:px-20 py-10 flex-col gap-y-4 items-center relative justify-between mx-auto top-[-25%] h-[500px] w-[1000px] rounded-lg origin-top"
+          "flex px-8 md:px-20 py-10 flex-col gap-y-4 items-center relative justify-between mx-auto top-[-25%] h-[500px] w-[1100px] rounded-lg origin-top"
         }
       >
         <div className="h-[60px] md:h-[100px] w-[120px] md:w-[200px]">

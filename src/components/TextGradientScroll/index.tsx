@@ -19,8 +19,8 @@ export default function TextGradientScroll({
   const words = paragraph.split(" ");
   return (
     <main className={cn(className)}>
-      <div className={`${!WhyUs && "h-[100vh]"}`}> </div>
-      <Character paragraph={paragraph} />
+      <div className={`${WhyUs === true ? "" : "h-[100vh]"}`}> </div>
+      <Character paragraph={paragraph} WhyUs={WhyUs} />
     </main>
   );
 }

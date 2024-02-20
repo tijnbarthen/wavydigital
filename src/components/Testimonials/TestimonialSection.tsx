@@ -43,7 +43,7 @@ const projects = [
   },
 ];
 
-export default function AcrticleSection() {
+export default function TestimonialSection() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -69,8 +69,9 @@ export default function AcrticleSection() {
       className={"relative top-[10vh] max-w-7xl mx-auto px-4"}
     >
       <TextGradientScroll
-        paragraph="This is what our clients say."
+        paragraph="And this is what our clients say."
         className="sticky w-full px-4 mx-auto justify-center flex top-10 font-bold text-3xl md:text-6xl h-1 mb-[500px]"
+        WhyUs={false}
       />
 
       {/* <MaskTitle phrases={phrases} /> */}

@@ -5,29 +5,12 @@ import { motion, useScroll } from "framer-motion";
 import React from "react";
 import TextGradientScroll from "../TextGradientScroll";
 
-const sections = [
-  {
-    title: "It's fast",
-    content:
-      "You'll move from the idea to a launchable web app in less than a month.",
-  },
-  {
-    title: "It's simple",
-    content:
-      "We help you identify the most beneficial and critical elements of your idea and turn them into an easy-to-use and beautiful product.",
-  },
-  {
-    title: "It's affordable",
-    content:
-      "Forget the endless search for freelancers or the cost of hiring a full-time dev team. No big budgets required.",
-  },
-  {
-    title: "It's launchable",
-    content: "You'll receive a product that is ready to launch.",
-  },
-];
+type Props = {
+  title: string;
+  sections: { title: string; content: string }[];
+};
 
-function Item() {
+function Item({ title, sections }: Props) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -78,11 +61,7 @@ function Item() {
               }}
             />
           </svg> */}
-          <TextGradientScroll
-            WhyUs={true}
-            className={""}
-            paragraph={"Why work with us?"}
-          />
+          <TextGradientScroll WhyUs={true} className={""} paragraph={title} />
           {/* <h1 className="text-6xl">Why work with us?</h1> */}
         </figure>
         <div className="w-1/2 flex flex-col space-y-16">
@@ -98,12 +77,56 @@ function Item() {
   );
 }
 
+const sections1 = [
+  {
+    title: "It's fast",
+    content:
+      "You'll move from the idea to a launchable web app in less than a month.",
+  },
+  {
+    title: "It's simple",
+    content:
+      "We help you identify the most beneficial and critical elements of your idea and turn them into an easy-to-use and beautiful product.",
+  },
+  {
+    title: "It's affordable",
+    content:
+      "Forget the endless search for freelancers or the cost of hiring a full-time dev team. No big budgets required.",
+  },
+  {
+    title: "It's launchable",
+    content: "You'll receive a product that is ready to launch.",
+  },
+];
+
+const sections2 = [
+  {
+    title: "Free discovery call",
+    content: "15 minutes",
+  },
+  {
+    title: "Proposal + agreement",
+    content: "2 days",
+  },
+  {
+    title: "Initial prototype",
+    content: "3 days",
+  },
+  {
+    title: "Feedback",
+    content: "1 day",
+  },
+  {
+    title: "MVP development",
+    content: "6 days",
+  },
+];
+
 export default function StickyScroll() {
   return (
     <>
-      <Item />
-      <Item />
-      <Item />
+      <Item title={"Why work with us?"} sections={sections1} />
+      <Item title={"How do we work?"} sections={sections2} />
     </>
   );
 }
