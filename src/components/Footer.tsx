@@ -42,9 +42,9 @@ const Footer = () => {
         <Button
           variant="outline"
           size={"lg"}
-          className="py-8 rounded-full font-bold text-lg"
+          className="py-8 rounded-full font-bold text-lg gap-2"
         >
-          Schedule a call with us <ArrowRight className="ml-2" />
+          Schedule a call with us <ArrowRight className="" />
         </Button>
         <div className="flex justify-center gap-6 flex-wrap">
           {footerLinks.map((link) => (

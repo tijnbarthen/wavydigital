@@ -1,5 +1,6 @@
 "use client";
 
+import { Meteors } from "@/lib/meteors";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import PageHeader from "./PageHeader";
 import { Badge } from "./ui/badge";
@@ -102,6 +103,7 @@ const HeroSection = () => {
             />
           </motion.div>
         </div>
+
         <motion.div
           initial={{ y: 100, opacity: 0 }} // Start off-screen to the left
           whileInView={{ y: 0, opacity: 1 }} // End at its final position, fully opaque
@@ -112,6 +114,7 @@ const HeroSection = () => {
           <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
             🚀 {"  "}Ready for launch?
           </h1>
+
           {/* <img
             src="https://images.unsplash.com/photo-1638742385167-96fc60e12f59?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="h-full w-full object-cover rounded-3xl"
