@@ -47,7 +47,7 @@ const faqs = [
 const ServicesSection = () => {
   return (
     <section id="services">
-      <MaxWidthWrapper className="py-8">
+      <MaxWidthWrapper className="py-16">
         <SectionHeading title="Services." />
         <div>
           <dl className="space-y-6 divide-y divide-black/100 dark:dive-white/100">

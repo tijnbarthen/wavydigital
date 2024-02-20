@@ -11,20 +11,22 @@ export default function Template({ children }: { children: React.ReactNode }) {
           animate="animate"
           exit="exitState"
           transition={{ duration: 1 }}
-          variants={{
-            initialState: {
-              opacity: 0,
-              clipPath: "circle(0% at 100% 0%)",
-            },
-            animate: {
-              opacity: 1,
-              clipPath: "circle(150% at 100% 0%)",
-            },
-            exitState: {
-              opacity: 0,
-              clipPath: "circle(0% at 100% 0%)",
-            },
-          }}
+          variants={
+            {
+              // initialState: {
+              //   opacity: 0,
+              //   clipPath: "circle(0% at 100% 0%)",
+              // },
+              // animate: {
+              //   opacity: 1,
+              //   clipPath: "circle(150% at 100% 0%)",
+              // },
+              // exitState: {
+              //   opacity: 0,
+              //   clipPath: "circle(0% at 100% 0%)",
+              // },
+            }
+          }
         >
           {children}
         </motion.div>

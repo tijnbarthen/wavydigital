@@ -17,11 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="h-full">
+    <html lang="en" suppressHydrationWarning className="h-full lenis">
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased relative h-full",
+          "min-h-screen bg-background font-sans antialiased h-full",
           fontSans.variable
         )}
       >
@@ -32,9 +32,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="relative flex flex-col min-h-screen">
-            {children}
-          </main>
+          <main className="">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
