@@ -12,6 +12,9 @@ import { title } from "process";
 import TeamSection from "@/components/TeamSection";
 import ZoomParallax from "@/components/ZoomParralax";
 import SectionHeading from "@/components/SectionHeading";
+import StickyScroll from "@/components/StickyScroll/App";
+import { HeroParallax } from "@/components/HeroParallax/HeroParallaxComponent";
+import { HeroParallaxDemo } from "@/components/HeroParallax";
 
 export default function Home() {
   return (
@@ -19,7 +22,6 @@ export default function Home() {
       <HeroSection />
       <TeamSection />
       <ZoomParallax />
-      <ServicesSection />
       <CaseStudiesSection />
       <ArticleSection />
     </>
