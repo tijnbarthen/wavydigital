@@ -15,7 +15,12 @@ export default function Paragraph({ paragraph }: ParagraphProps) {
 
   const words = paragraph.split(" ");
   return (
-    <p ref={container} className={styles.paragraph}>
+    <p
+      ref={container}
+      className={
+        "flex text-3xl md:text-6xl h-1 pt-10 max-w-7xl flex-wrap dark:text-white text-black"
+      }
+    >
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;
@@ -39,7 +44,7 @@ const Word = ({ children, progress, range }: WordProps) => {
   const amount = range[1] - range[0];
   const step = amount / children.length;
   return (
-    <span className={styles.word}>
+    <span className={"relative mr-4 top-4"}>
       {children.split("").map((char, i) => {
         const start = range[0] + i * step;
         const end = range[0] + (i + 1) * step;
@@ -63,7 +68,7 @@ const Char = ({ children, progress, range }: CharProps) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span>
-      <span className={styles.shadow}>{children}</span>
+      <span className={"opacity-20 absolute"}>{children}</span>
       <motion.span style={{ opacity: opacity }}>{children}</motion.span>
     </span>
   );

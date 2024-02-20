@@ -39,21 +39,30 @@ const Card = ({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className={styles.cardContainer}>
+    <div
+      ref={container}
+      className={"h-[100vh] flex items-center justify-center sticky top-10"}
+    >
       <motion.div
         style={{
           backgroundColor: color,
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className={styles.card}
+        className={
+          "flex flex-col relative top-[-25%] h-[500px] w-[1000px] rounded-lg p-[50px] origin-top"
+        }
       >
-        <h2>{title}</h2>
-        <div className={styles.body}>
-          <div className={styles.description}>
-            <p>{description}</p>
-            <span>
-              <a href={src} target="_blank">
+        <h2 className="text-center m-0 text-4xl font-bold">{title}</h2>
+        <div className={"flex h-[100%] mt-[50px] gap-[50px]"}>
+          <div className={"w-[40%] relative top-[10%]"}>
+            <p className="text-lg">{description}</p>
+            <span className="flex items-center gap-[5px]">
+              <a
+                className="text-base underline cursor-pointer"
+                href={src}
+                target="_blank"
+              >
                 See more
               </a>
               <svg
@@ -71,9 +80,12 @@ const Card = ({
             </span>
           </div>
 
-          <div className={styles.imageContainer}>
-            <motion.div className={styles.inner} style={{ scale: imageScale }}>
-              <Image fill src={`${src}`} alt="image" />
+          <div className={"relative w-[60%] h-full rounded-lg overflow-hidden"}>
+            <motion.div
+              className={"w-full h-full"}
+              style={{ scale: imageScale }}
+            >
+              <Image fill src={`${src}`} alt="image" className="object-cover" />
             </motion.div>
           </div>
         </div>

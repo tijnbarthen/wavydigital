@@ -9,7 +9,7 @@ import TextGradientScroll from "../TextGradientScroll";
 
 const projects = [
   {
-    title: "Matthias Leidinger",
+    title: "Gina van Os",
     description:
       "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
     src: "/image1.png",
@@ -17,7 +17,7 @@ const projects = [
     color: "#BBACAF",
   },
   {
-    title: "Clément Chapillon",
+    title: "Raymond van Oerle",
     description:
       "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
     src: "/image1.png",
@@ -25,7 +25,7 @@ const projects = [
     color: "#977F6D",
   },
   {
-    title: "Zissou",
+    title: "Lisette Lokers",
     description:
       "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
     src: "/image1.png",
@@ -50,7 +50,7 @@ const projects = [
   },
 ];
 
-export default function Home() {
+export default function AcrticleSection() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -71,10 +71,10 @@ export default function Home() {
   const phrases = ["This is what our clients say."];
 
   return (
-    <main ref={container} className={`${styles.main}`}>
+    <main ref={container} className={"relative top-[10vh]"}>
       <TextGradientScroll
         paragraph="This is what our clients say."
-        className="sticky w-full px-4 mx-auto justify-center flex top-10 font-bold text-3xl md:text-6xl "
+        className="sticky w-full px-4 mx-auto justify-center flex top-10 font-bold text-3xl md:text-6xl h-1 pb-10"
       />
 
       {/* <MaskTitle phrases={phrases} /> */}

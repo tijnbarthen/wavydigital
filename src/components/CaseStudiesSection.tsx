@@ -35,7 +35,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    isMobile ? ["5%", "-95%"] : ["30%", "-70%"]
+    isMobile ? ["15%", "-95%"] : ["50%", "-50%"]
   );
   return (
     <div className="w-full ">
@@ -43,10 +43,10 @@ const HorizontalScrollCarousel = () => {
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           <TextGradientScroll
             paragraph="Do not just take our word."
-            className="absolute w-full px-4 mx-auto justify-center flex top-11 font-bold"
+            className="absolute w-full px-4 mx-auto justify-center flex top-11 font-bold h-1"
           />
 
-          <motion.div style={{ x }} className="flex gap-24 md:gap-32">
+          <motion.div style={{ x }} className="flex gap-24 md:gap-32 pt-20">
             {cards.map((card) => {
               return <CaseStudyCard key={card.id} />;
             })}
