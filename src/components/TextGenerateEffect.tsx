@@ -1,6 +1,7 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({
@@ -11,6 +12,9 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
+
+  const { ref } = useInView();
+
   let wordsArray = words.split(" ");
   useEffect(() => {
     animate(
@@ -43,12 +47,12 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
+    <motion.div ref={ref} className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-black text-6xl leading-snug tracking-wide">
+        <div className=" dark:text-white text-black text-4xl md:text-6xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

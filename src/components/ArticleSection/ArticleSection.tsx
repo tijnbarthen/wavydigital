@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import Card from "./_components/Card";
 import { TextGenerateEffect } from "../TextGenerateEffect";
+import TextGradientScroll from "../TextGradientScroll";
 
 const projects = [
   {
@@ -67,12 +68,16 @@ export default function Home() {
     requestAnimationFrame(raf);
   });
 
+  const phrases = ["This is what our clients say."];
+
   return (
-    <main ref={container} className={`${styles.main} relative`}>
-      <TextGenerateEffect
-        words="This is what our client say."
-        className="sticky w-full mx-auto justify-center flex top-16 font-bold mb-[500px]"
+    <main ref={container} className={`${styles.main}`}>
+      <TextGradientScroll
+        paragraph="This is what our clients say."
+        className="sticky w-full px-4 mx-auto justify-center flex top-10 font-bold text-3xl md:text-6xl "
       />
+
+      {/* <MaskTitle phrases={phrases} /> */}
       {projects.map((project, i) => {
         const targetScale = 1 - (projects.length - i) * 0.05;
         return (

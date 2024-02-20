@@ -15,6 +15,7 @@ import SectionHeading from "@/components/SectionHeading";
 import StickyScroll from "@/components/StickyScroll/App";
 import { HeroParallax } from "@/components/HeroParallax/HeroParallaxComponent";
 import { HeroParallaxDemo } from "@/components/HeroParallax";
+import TextGradientScroll from "@/components/TextGradientScroll";
 
 export default function Home() {
   return (

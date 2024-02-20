@@ -6,6 +6,7 @@ import CaseStudyCard from "./CaseStudyCard";
 import Lenis from "@studio-freight/lenis";
 import { useMediaQuery } from "react-responsive";
 import { TextGenerateEffect } from "./TextGenerateEffect";
+import TextGradientScroll from "./TextGradientScroll";
 
 const Example = () => {
   useEffect(() => {
@@ -38,12 +39,13 @@ const HorizontalScrollCarousel = () => {
   );
   return (
     <div className="w-full ">
-      <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+      <section ref={targetRef} className="relative h-[300vh]">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-          <TextGenerateEffect
-            words=" Do not just take our word for it."
-            className="absolute w-full mx-auto justify-center flex top-20 font-bold"
+          <TextGradientScroll
+            paragraph="Do not just take our word."
+            className="absolute w-full px-4 mx-auto justify-center flex top-11 font-bold"
           />
+
           <motion.div style={{ x }} className="flex gap-24 md:gap-32">
             {cards.map((card) => {
               return <CaseStudyCard key={card.id} />;
