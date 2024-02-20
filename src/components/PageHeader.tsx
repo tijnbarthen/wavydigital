@@ -11,7 +11,7 @@ const PageHeader = ({ title, subtitle, description }: HeaderProps) => {
         <h1 className="text-6xl md:text-7xl font-extrabold tracking-tighter">
           {title}
         </h1>
-        <h1 className="from-purple-600 font-extrabold to-blue-600 bg-clip-text text-transparent bg-gradient-to-r text-6xl md:text-7xl  pb-2 tracking-tighter">
+        <h1 className="from-purple-600 font-extrabold to-blue-600 bg-clip-text text-transparent bg-gradient-to-r text-5xl md:text-6xl  pb-2 tracking-tighter">
           {subtitle}
         </h1>
       </div>
