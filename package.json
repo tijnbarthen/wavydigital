@@ -17,6 +17,7 @@
     "@tsparticles/engine": "^3.2.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.2.1",
+    "@studio-freight/lenis": "^1.0.35",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.5",
@@ -27,6 +28,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.50.1",
+    "react-responsive": "^9.0.2",
+    "sass": "^1.71.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
