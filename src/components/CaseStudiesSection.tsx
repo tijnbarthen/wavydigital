@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import CaseStudyCard from "./CaseStudyCard";
 import Lenis from "@studio-freight/lenis";
 import { useMediaQuery } from "react-responsive";
+import { TextGenerateEffect } from "./TextGenerateEffect";
 
 const Example = () => {
   useEffect(() => {
@@ -17,21 +18,7 @@ const Example = () => {
 
     requestAnimationFrame(raf);
   }, []);
-  return (
-    <div className="bg-black">
-      {/* <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll down
-        </span>
-      </div> */}
-      <HorizontalScrollCarousel />
-      {/* <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
-        </span>
-      </div> */}
-    </div>
-  );
+  return <HorizontalScrollCarousel />;
 };
 
 const HorizontalScrollCarousel = () => {
@@ -50,15 +37,21 @@ const HorizontalScrollCarousel = () => {
     isMobile ? ["5%", "-95%"] : ["30%", "-70%"]
   );
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-24 md:gap-32">
-          {cards.map((card) => {
-            return <CaseStudyCard key={card.id} />;
-          })}
-        </motion.div>
-      </div>
-    </section>
+    <div className="w-full ">
+      <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+          <TextGenerateEffect
+            words=" Do not just take our word for it."
+            className="absolute w-full mx-auto justify-center flex top-20 font-bold"
+          />
+          <motion.div style={{ x }} className="flex gap-24 md:gap-32">
+            {cards.map((card) => {
+              return <CaseStudyCard key={card.id} />;
+            })}
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 };
 

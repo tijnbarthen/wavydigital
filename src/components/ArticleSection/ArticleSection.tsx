@@ -4,6 +4,7 @@ import { useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import Card from "./_components/Card";
+import { TextGenerateEffect } from "../TextGenerateEffect";
 
 const projects = [
   {
@@ -67,7 +68,11 @@ export default function Home() {
   });
 
   return (
-    <main ref={container} className={styles.main}>
+    <main ref={container} className={`${styles.main} relative`}>
+      <TextGenerateEffect
+        words="This is what our client say."
+        className="sticky w-full mx-auto justify-center flex top-16 font-bold mb-[500px]"
+      />
       {projects.map((project, i) => {
         const targetScale = 1 - (projects.length - i) * 0.05;
         return (
