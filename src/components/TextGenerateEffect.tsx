@@ -36,7 +36,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white text-black opacity-0"
+              className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 opacity-0"
             >
               {word}{" "}
             </motion.span>
@@ -49,8 +49,21 @@ export const TextGenerateEffect = ({
   return (
     <motion.div ref={ref} className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-black text-4xl md:text-6xl leading-snug tracking-wide">
+        <div className="xl:flex xl:flex-row font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 text-6xl leading-snug tracking-wide">
           {renderWords()}
+          <h1 className="flex items-center text-6xl">
+            <span className="relative xl:ml-3 h-[1em] mt-4 xl:mt-0 w-48 overflow-hidden">
+              <span className="absolute h-full w-full -translate-y-full animate-slide leading-none text-black dark:text-white">
+                Ideas.
+              </span>
+              <span className="absolute h-full w-full -translate-y-full animate-slide leading-none text-black dark:text-white [animation-delay:2s]">
+                Tech.
+              </span>
+              <span className="absolute h-full w-full -translate-y-full animate-slide leading-none text-black dark:text-white [animation-delay:4s]">
+                Code.
+              </span>
+            </span>
+          </h1>
         </div>
       </div>
     </motion.div>

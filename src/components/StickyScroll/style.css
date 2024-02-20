@@ -98,7 +98,7 @@ p {
   color: var(--accent);
 } */
 
-code {
+/* code {
   font-family: input-mono, monospace;
   font-weight: 400;
   font-style: normal;
@@ -121,7 +121,7 @@ circle {
   stroke-dashoffset: 0;
   stroke-width: 5%;
   fill: none;
-}
+} */
 
 /* .bg {
   stroke: var(--accent);

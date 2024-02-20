@@ -66,28 +66,32 @@ export default function ZoomParallax() {
   ];
 
   return (
-    <>
+    <div className="bg-background">
       <MaxWidthWrapper className="py-8">
         <SectionHeading
           className="py-20"
           title="We know that navigating the digital world can be difficult. 🤯"
         />
       </MaxWidthWrapper>
-      <div ref={container} className={styles.container}>
+      <div ref={container} className={`${styles.container}`}>
         <div className={styles.sticky}>
           {pictures.map(({ src, scale, id }, index) => {
             return (
               <motion.div key={index} style={{ scale }} className={styles.el}>
                 <div className={styles.imageContainer}>
                   {id === 1 ? (
-                    <div className="h-full">
+                    <div className="h-full relative mx-auto ">
                       <Image
                         src={src}
                         fill
                         alt="image"
                         className="object-cover"
                       />
-                      <WaveText />
+                      <WaveTextVertical />
+                      {/* <p className="h-full text-sm md:text-3xl text-white absolute flex items-center justify-center w-full ">
+                        But we are here to help
+                      </p> */}
+                      {/* <WaveText /> */}
                     </div>
                   ) : (
                     <div className="h-full">
@@ -109,7 +113,7 @@ export default function ZoomParallax() {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -125,9 +129,9 @@ const WaveText = () => {
 
     // Adjust the range values for mobile devices
     if (isMobile) {
-      setXRange(["-100%", "250%"]); // Less movement on mobile
+      setXRange(["-125%", "250%"]); // Less movement on mobile
     } else {
-      setXRange(["-70%", "200%"]); // More movement on desktop
+      setXRange(["-79%", "200%"]); // More movement on desktop
     }
   }, []);
 
@@ -143,5 +147,13 @@ const WaveText = () => {
         But we are here to help.
       </motion.div>
     </div>
+  );
+};
+
+const WaveTextVertical = () => {
+  return (
+    <motion.p className="h-full  text-center w-full text-xs md:text-3xl  absolute flex items-center justify-center  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+      But we are here to help.
+    </motion.p>
   );
 };

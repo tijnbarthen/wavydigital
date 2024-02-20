@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import Character from "./_components/Character";
 
 import React from "react";
@@ -7,13 +8,18 @@ import React from "react";
 type Props = {
   className: string;
   paragraph: string;
+  WhyUs?: boolean;
 };
 
-export default function TextGradientScroll({ className, paragraph }: Props) {
+export default function TextGradientScroll({
+  WhyUs,
+  className,
+  paragraph,
+}: Props) {
   const words = paragraph.split(" ");
   return (
-    <main className={className}>
-      <div style={{ height: "100vh" }}></div>
+    <main className={cn(className)}>
+      <div className={`${!WhyUs && "h-[100vh]"}`}> </div>
       <Character paragraph={paragraph} />
     </main>
   );
