@@ -12,6 +12,7 @@ import { title } from "process";
 import TeamSection from "@/components/TeamSection";
 import ZoomParallax from "@/components/ZoomParralax";
 import SectionHeading from "@/components/SectionHeading";
+import WhatWeOffer from "@/components/WhatWeOffer/WhatWeOffer";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       <HeroSection />
       <TeamSection />
       <ZoomParallax />
-      <ServicesSection />
+      <WhatWeOffer />
+      {/* <ServicesSection /> */}
       <CaseStudiesSection />
       <ArticleSection />
     </>
