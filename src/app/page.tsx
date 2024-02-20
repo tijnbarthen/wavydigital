@@ -1,4 +1,4 @@
-import ArticleSection from "@/components/ArticleSection";
+import ArticleSection from "@/components/ArticleSection/ArticleSection";
 import BlogCard from "@/components/BlogCard";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import HeroSection from "@/components/HeroSection";

@@ -125,9 +125,9 @@ const WaveText = () => {
 
     // Adjust the range values for mobile devices
     if (isMobile) {
-      setXRange(["-160%", "250%"]); // Less movement on mobile
+      setXRange(["-100%", "250%"]); // Less movement on mobile
     } else {
-      setXRange(["-134%", "200%"]); // More movement on desktop
+      setXRange(["-70%", "200%"]); // More movement on desktop
     }
   }, []);
 
