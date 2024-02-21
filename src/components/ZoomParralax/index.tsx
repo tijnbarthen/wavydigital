@@ -85,7 +85,7 @@ export default function ZoomParallax() {
                         src={src}
                         fill
                         alt="image"
-                        className="object-cover"
+                        className="object-cover brightness-75"
                       />
                       <WaveTextVertical />
                       {/* <p className="h-full text-sm md:text-3xl text-white absolute flex items-center justify-center w-full ">

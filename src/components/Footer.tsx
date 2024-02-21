@@ -36,13 +36,13 @@ const Footer = () => {
   return (
     <MaxWidthWrapper className="py-8">
       <footer className="bg-black rounded-3xl flex justify-center items-center flex-col gap-16 px-10 py-36 relative">
-        <h1 className="font-semibold text-5xl lg:text-7xl text-white text-center">
-          Let&apos;s create your next big idea.
+        <h1 className="font-semibold text-5xl lg:text-7xl text-white tracking-tight text-center">
+          Ready to discuss your next big idea?
         </h1>
         <Button
           variant="outline"
           size={"lg"}
-          className="py-8 rounded-full font-bold text-lg gap-2"
+          className="py-8 rounded-full font-bold text-white dark:text-black text-lg gap-2"
         >
           Schedule a call with us <ArrowRight className="" />
         </Button>

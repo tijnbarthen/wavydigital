@@ -27,7 +27,7 @@ export default function Paragraph({ WhyUs, paragraph }: ParagraphProps) {
   return (
     <p
       ref={container}
-      className={`flex text-3xl md:text-6xl max-w-7xl flex-wrap dark:text-white text-black ${
+      className={`flex text-3xl md:text-6xl max-w-7xl flex-wrap dark:text-white text-black tracking-tight ${
         WhyUs === true ? "" : "pt-10 h-1"
       }`}
     >
@@ -84,8 +84,10 @@ const Char = ({ children, progress, range }: CharProps) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span>
-      <span className={"opacity-0 absolute"}>{children}</span>
-      <motion.span style={{ opacity: opacity }}>{children}</motion.span>
+      <span className={"opacity-0 absolute tracking-tight"}>{children}</span>
+      <motion.span style={{ opacity: opacity }} className="tracking-tight">
+        {children}
+      </motion.span>
     </span>
   );
 };

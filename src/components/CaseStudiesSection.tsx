@@ -42,8 +42,8 @@ const HorizontalScrollCarousel = () => {
       <section ref={targetRef} className="relative h-[300vh]">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           <TextGradientScroll
-            paragraph="Do not just take our word. Here are some projects we have done."
-            className="absolute w-full px-4 mx-auto justify-center flex top-11 font-bold h-1"
+            paragraph="Don't just take our word for it. Here are some projects we have done."
+            className="absolute w-full px-4 mx-auto justify-center flex top-11 font-bold h-1 tracking-tight"
             WhyUs={false}
           />
 
