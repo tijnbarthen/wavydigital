@@ -18,7 +18,12 @@ export default function TextGradientScroll({
 }: Props) {
   const words = paragraph.split(" ");
   return (
-    <main className={cn(className)}>
+    <main
+      className={cn(
+        className,
+        " w-full px-4  top-4 md:top-8  font-bold text-3xl md:text-6xl "
+      )}
+    >
       <div className={`${WhyUs === true ? "" : "h-[100vh]"}`}> </div>
       <Character paragraph={paragraph} WhyUs={WhyUs} />
     </main>

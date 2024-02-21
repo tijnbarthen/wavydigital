@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FadeIn, FadeInStagger } from "./FadeIn";
 import TextGradientScroll from "./TextGradientScroll";
+import { Button } from "./ui/button";
 
 const tiers = [
   {
@@ -45,23 +46,23 @@ export default function PricingPage() {
   return (
     <div className="isolate overflow-hidden bg-gradient-to-r from-blue-500 to-purple-500">
       <div className="mx-auto max-w-7xl px-6 pb-96 pt-0 text-center sm:pt-0 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="text-base font-semibold leading-7 text-indigo-400">
+        <div className="mx-auto max-w-4xl text-white dark:text-secondary ">
+          {/* <h2 className="text-base font-semibold leading-7 text-indigo-400">
             Pricing
-          </h2>
+          </h2> */}
           {/* <TextGradientScroll
             paragraph="The right price for you, whoever you are"
             className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl"
             WhyUs={false}
           /> */}
-          <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            The right price for you,{" "}
+          <p className="text-4xl md:text-7xl font-bold tracking-tighter ">
+            The right price for you.{" "}
             <br className="hidden sm:inline lg:hidden" />
-            whoever you are
+            Whoever you are
           </p>
         </div>
         <div className="relative mt-6">
-          <p className="mx-auto max-w-2xl text-lg leading-8 text-white/60">
+          <p className="mx-auto max-w-2xl text-lg leading-8 text-muted">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
             numquam eligendi quos odit doloribus molestiae voluptatum.
           </p>
@@ -85,19 +86,19 @@ export default function PricingPage() {
           </svg> */}
         </div>
       </div>
-      <div className="flow-root bg-white dark:bg-black pb-24 sm:pb-32">
+      <div className="flow-root bg-background pb-24 sm:pb-32">
         <div className="-mt-80">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2">
               {tiers.map((tier) => (
                 <div
                   key={tier.id}
-                  className="flex flex-col justify-between rounded-3xl bg-white dark:bg-slate-900 p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
+                  className="flex flex-col justify-between rounded-3xl bg-background p-8 shadow-xl border border-primary/10 sm:p-10"
                 >
                   <div>
                     <h3
                       id={tier.id}
-                      className="text-base font-semibold leading-7 "
+                      className="text-base text-muted-foreground font-semibold leading-7 "
                     >
                       {tier.name}
                     </h3>
@@ -109,30 +110,33 @@ export default function PricingPage() {
                         /month
                       </span> */}
                     </div>
-                    <p className="mt-6 text-base leading-7 text-gray-600">
+                    <p className="mt-6 text-base leading-7 text-muted-foreground">
                       {tier.description}
                     </p>
-                    <a
-                      href={tier.href}
-                      aria-describedby={tier.id}
-                      className="mt-8 block rounded-md bg-gradient-to-r from-blue-500 to-purple-500 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    <Button
+                      variant="outline"
+                      size={"lg"}
+                      className=" mt-6 rounded-full text-secondary hover:text-secondary font-bold text-base gap-2 group bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-80"
                     >
-                      Get started today
-                    </a>
+                      Schedule a call with us{" "}
+                      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                        -&gt;
+                      </span>
+                    </Button>
 
-                    <p className="mt-6 text-base font-bold leading-7 text-gray-600">
+                    <p className="mt-6 text-base font-bold leading-7 ">
                       What you will get:
                     </p>
                     <FadeInStagger>
                       <ul
                         role="list"
-                        className="mt-6 space-y-4 text-sm leading-6 text-gray-600"
+                        className="mt-6 space-y-4 text-sm md:text-base leading-6 text-muted-foreground"
                       >
                         {tier.features.map((feature) => (
                           <li ref={ref} key={feature} className="flex gap-x-3">
                             <FadeIn className="flex flex-row gap-2">
                               <CheckIcon
-                                className="h-6 w-5 flex-none text-black"
+                                className="h-6 w-5 flex-none text-primary"
                                 aria-hidden="true"
                               />
                               {feature}

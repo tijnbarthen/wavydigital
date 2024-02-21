@@ -34,17 +34,20 @@ const footerLinks: FooterLink[] = [
 
 const Footer = () => {
   return (
-    <MaxWidthWrapper className="py-8">
-      <footer className="bg-slate-300 dark:bg-slate-900 rounded-3xl flex justify-center items-center flex-col gap-16 px-10 py-36 relative">
-        <h1 className="font-semibold text-5xl lg:text-7xl  tracking-tight text-center">
+    <MaxWidthWrapper className=" py-6 md:py-8 bg-background">
+      <footer className="rounded-3xl flex justify-center shadow-xl border border-primary/10 items-center flex-col gap-16 10 py-36 relative md:bg-secondary">
+        <h1 className="font-semibold max-w-3xl text-5xl lg:text-7xl  tracking-tight text-center">
           Ready to discuss your next big idea?
         </h1>
         <Button
           variant="outline"
           size={"lg"}
-          className="py-8 rounded-full font-bold  text-lg gap-2"
+          className="py-8 rounded-full font-bold  text-lg gap-2 group"
         >
-          Schedule a call with us <ArrowRight className="" />
+          Schedule a call with us{" "}
+          <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+            -&gt;
+          </span>
         </Button>
         <div className="flex justify-center gap-6 flex-wrap">
           {footerLinks.map((link) => (
@@ -57,9 +60,9 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className="absolute bottom-5 right-5">
+        {/* <div className="absolute bottom-5 right-5">
           <ThemeToggle />
-        </div>
+        </div> */}
       </footer>
     </MaxWidthWrapper>
   );

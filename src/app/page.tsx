@@ -1,4 +1,4 @@
-import CaseStudiesSection from "@/components/CaseStudiesSection";
+import CaseStudiesSection from "@/components/CaseStudies/CaseStudiesSection";
 import HeroSection from "@/components/HeroSection";
 import LogoScroll from "@/components/LogoScroll";
 import PricingPage from "@/components/PricingPage";

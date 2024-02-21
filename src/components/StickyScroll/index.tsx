@@ -1,5 +1,5 @@
 "use client";
-import "./style.css";
+// import "./style.css";
 import { useEffect, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import React from "react";
@@ -36,9 +36,12 @@ function Item({ title, sections }: Props) {
   //   fill: none;
   // }
   return (
-    <section className="h-[100vh] flex justify-center items-center max-w-7xl mx-auto">
-      <div ref={ref} className="w-full relative flex">
-        <figure className="w-1/2 sticky top-20 h-full flex flex-row">
+    <section className="h-[130vh] md:h-[100vh] flex justify-center items-center max-w-7xl mx-auto">
+      <div
+        ref={ref}
+        className="w-full relative flex flex-col space-y-10 md:space-y-0 md:flex-row md:gap-10"
+      >
+        <figure className="sticky top-0 pt-20 md:pt-0 md:top-16 pb-2 h-fit bg-background w-1/2  z-20 md:h-full flex flex-row text-start font-semibold tracking-tight  border-b border-primary">
           {/* <svg
             id="progress"
             width="75"
@@ -64,11 +67,15 @@ function Item({ title, sections }: Props) {
           <TextGradientScroll WhyUs={true} className={""} paragraph={title} />
           {/* <h1 className="text-6xl">Why work with us?</h1> */}
         </figure>
-        <div className="w-1/2 flex flex-col space-y-16">
+        <div className="md:w-1/2 flex flex-col space-y-16 px-4 z-10">
           {sections.map((section, index) => (
             <div key={index} className="flex flex-col space-y-6">
-              <h3 className="text-4xl tracking-tight">{section.title}</h3>
-              <p className="text-lg tracking-tight">{section.content}</p>
+              <h3 className="text-3xl md:text-5xl  tracking-tighter text-p">
+                {section.title}
+              </h3>
+              <p className="text-base md:text-lg tracking-tight text-muted-foreground">
+                {section.content}
+              </p>
             </div>
           ))}
         </div>

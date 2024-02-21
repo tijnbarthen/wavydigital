@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased h-full",
+          "min-h-screen bg-background font-sans antialiased h-full tracking-tight text-primary",
           fontSans.variable
         )}
       >
@@ -34,6 +35,9 @@ export default function RootLayout({
         >
           <SmoothScroll />
           <Navbar />
+          <div className="fixed bottom-4 right-4 z-[100]">
+            <ThemeToggle />
+          </div>
 
           {children}
           <Footer />

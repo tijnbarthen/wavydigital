@@ -26,7 +26,7 @@ const TeamSection = () => {
             />
           </Card>
           <div className="flex flex-col gap-1">
-            <h1 className="font-semibold text-xl uppercase">Luke</h1>
+            <h1 className="font-semibold text-xl ">Luke</h1>
           </div>
         </motion.div>{" "}
         <motion.div
@@ -43,7 +43,7 @@ const TeamSection = () => {
             />
           </Card>
           <div className="flex flex-row gap-2">
-            <h1 className="font-semibold text-xl uppercase">Tijn</h1>
+            <h1 className="font-semibold text-xl ">Tijn</h1>
           </div>
         </motion.div>
       </div>

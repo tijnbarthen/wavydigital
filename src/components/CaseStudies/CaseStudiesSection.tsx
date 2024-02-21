@@ -1,12 +1,12 @@
 "use client";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { useInView } from "framer-motion";
-import CaseStudyCard from "./CaseStudyCard";
+import CaseStudyCard from "./_components/CaseStudyCard";
 import Lenis from "@studio-freight/lenis";
 import { useMediaQuery } from "react-responsive";
-import { TextGenerateEffect } from "./TextGenerateEffect";
-import TextGradientScroll from "./TextGradientScroll";
+import { TextGenerateEffect } from "../TextGenerateEffect";
+import TextGradientScroll from "../TextGradientScroll";
+import { useInView } from "react-intersection-observer";
 
 const Example = () => {
   useEffect(() => {
@@ -24,6 +24,7 @@ const Example = () => {
 
 const HorizontalScrollCarousel = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
+  const textRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
@@ -37,24 +38,27 @@ const HorizontalScrollCarousel = () => {
     [0, 1],
     isMobile ? ["5%", "-100%"] : ["90%", "-100%"]
   );
-  return (
-    <div className="max-w-7xl mx-auto px-4 mt-[60vh]">
-      <section ref={targetRef} className="relative h-[300vh]">
-        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-          <TextGradientScroll
-            paragraph="Don't just take our word for it. Here are some projects we have done."
-            className="absolute w-full px-4 mx-auto justify-center flex top-11 font-bold h-1 tracking-tight"
-            WhyUs={false}
-          />
 
-          <motion.div style={{ x }} className="flex gap-24 md:gap-32 pt-20">
-            {cards.map((card) => {
-              return <CaseStudyCard key={card.id} />;
-            })}
-          </motion.div>
-        </div>
-      </section>
-    </div>
+  return (
+    <>
+      <div className="max-w-7xl mx-auto mt-[60vh]">
+        <section ref={targetRef} className="relative h-[300vh]">
+          <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+            <TextGradientScroll
+              paragraph="Don't just take our word for it. Here are some projects we have done."
+              className="h-1 absolute mx-auto justify-center flex"
+              WhyUs={false}
+            />
+
+            <motion.div style={{ x }} className="flex gap-24 md:gap-32 pt-28  ">
+              {cards.map((card) => {
+                return <CaseStudyCard key={card.id} />;
+              })}
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

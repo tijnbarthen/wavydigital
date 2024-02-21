@@ -1,5 +1,5 @@
-import CaseStudiesSection from "@/components/CaseStudiesSection";
-import CaseStudyCard from "@/components/CaseStudyCard";
+import CaseStudiesSection from "@/components/CaseStudies/CaseStudiesSection";
+import CaseStudyCard from "@/components/CaseStudies/_components/CaseStudyCard";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import PageHeader from "@/components/PageHeader";
 

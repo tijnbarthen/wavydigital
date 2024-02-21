@@ -1,8 +1,8 @@
 "use client";
 
-import { Card } from "./ui/card";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
+import { Card } from "../../ui/card";
+import { Badge } from "../../ui/badge";
+import { Button } from "../../ui/button";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -19,7 +19,6 @@ const CaseStudyCard = ({
     <motion.div
       initial={{ y: 100, opacity: 0 }} // Start off-screen to the left
       whileInView={{ y: 0, opacity: 1 }} // End at its final position, fully opaque
-      transition={{ duration: 0.7, delay: 0.1 }} // Adjust timing and delay here
       viewport={{ once: true, amount: 0.4 }} // Configure when the animation triggers
     >
       <Card

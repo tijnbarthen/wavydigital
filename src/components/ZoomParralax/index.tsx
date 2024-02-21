@@ -67,13 +67,13 @@ export default function ZoomParallax() {
 
   return (
     <div className="bg-background">
-      <MaxWidthWrapper className="py-8">
+      <MaxWidthWrapper className="py-8 bg-background">
         <SectionHeading
           className="py-20"
           title="We know that navigating the digital world can be difficult. 🤯"
         />
       </MaxWidthWrapper>
-      <div ref={container} className={`${styles.container}`}>
+      <div ref={container} className={`${styles.container} bg-background`}>
         <div className={styles.sticky}>
           {pictures.map(({ src, scale, id }, index) => {
             return (

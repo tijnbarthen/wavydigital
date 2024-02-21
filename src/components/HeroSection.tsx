@@ -28,7 +28,7 @@ const HeroSection = () => {
             className="h-full w-full object-cover rounded-3xl"
             alt=""
           />
-          <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
+          <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white dark:text-[#E6E6E6] tracking-tight flex justify-center items-center">
             We build. We grow. We scale.
           </h1>
         </motion.div>
@@ -45,7 +45,7 @@ const HeroSection = () => {
               className="h-full w-full object-cover rounded-3xl"
               alt=""
             />
-            <h1 className="text-lg md:text-3xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
+            <h1 className="text-lg md:text-3xl absolute top-0 left-0 h-full w-full font-bold text-white dark:text-[#E6E6E6] tracking-tight flex justify-center items-center">
               E-Commerce.
             </h1>
           </motion.div>
@@ -63,7 +63,7 @@ const HeroSection = () => {
               alt=""
             /> */}
 
-            <h1 className="text-lg md:text-4xl font-bold text-white tracking-tight">
+            <h1 className="text-lg md:text-4xl font-bold  text-white dark:text-[#E6E6E6] tracking-tight">
               Web Development.
             </h1>
           </motion.div>
@@ -77,7 +77,7 @@ const HeroSection = () => {
             viewport={{ once: true, amount: 0.5 }} // Configure when the animation triggers
             className="lg:h-32 h-20 w-full relative"
           >
-            <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
+            <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white dark:text-[#E6E6E6] tracking-tight flex justify-center items-center">
               Automations.
             </h1>
             <img
@@ -93,7 +93,7 @@ const HeroSection = () => {
             viewport={{ once: true, amount: 0.5 }} // Configure when the animation triggers
             className="lg:h-32 h-20 w-full relative text-center"
           >
-            <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
+            <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white dark:text-[#E6E6E6] tracking-tight flex justify-center items-center">
               Platforms.
             </h1>
             <img
@@ -111,7 +111,7 @@ const HeroSection = () => {
           viewport={{ once: true, amount: 0.5 }} // Configure when the animation triggers
           className="lg:h-32 h-20 w-full relative bg-gradient-to-br  from-white rounded-3xl flex justify-center items-center to-blue-500 overflow-hidden"
         >
-          <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center z-1000">
+          <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white dark:text-[#E6E6E6] tracking-tight flex justify-center items-center z-1000">
             🚀 {"  "}Ready for launch?
           </h1>
           <Meteors number={100} />
