@@ -31,7 +31,7 @@ export const TextGenerateEffect = ({
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
+      <motion.div ref={scope} className="">
         {wordsArray.map((word, idx) => {
           return (
             <motion.span
@@ -49,10 +49,10 @@ export const TextGenerateEffect = ({
   return (
     <motion.div ref={ref} className={cn("font-bold", className)}>
       <div className="mt-0">
-        <div className="xl:flex xl:flex-row font-bold text-transparent  bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 text-5xl md:text-6xl leading-snug tracking-wide">
+        <div className="xl:flex xl:flex-row font-bold text-transparent  bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 text-5xl md:text-6xl ">
           {renderWords()}
           <h1 className="flex items-center text-5xl md:text-6xl tracking-tight">
-            <span className="relative xl:ml-3 h-[1em] mt-4 xl:mt-0 w-48 overflow-hidden">
+            <span className="relative xl:ml-3 h-[1em] mt-0  xl:mt-0 w-48 overflow-hidden">
               <span className="absolute h-full w-full tracking-tight -translate-y-full animate-slide leading-none text-black dark:text-[#E6E6E6]">
                 Ideas.
               </span>

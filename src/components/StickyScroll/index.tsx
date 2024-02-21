@@ -8,9 +8,10 @@ import TextGradientScroll from "../TextGradientScroll";
 type Props = {
   title: string;
   sections: { title: string; content: string }[];
+  className: string;
 };
 
-function Item({ title, sections }: Props) {
+function Item({ className, title, sections }: Props) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -36,12 +37,14 @@ function Item({ title, sections }: Props) {
   //   fill: none;
   // }
   return (
-    <section className="h-[130vh] md:h-[100vh] flex justify-center items-center max-w-7xl mx-auto m">
+    <section
+      className={`h-[130vh] md:h-[100vh] flex justify-center items-center max-w-7xl mx-auto ${className}`}
+    >
       <div
         ref={ref}
         className="w-full relative flex flex-col space-y-10 md:space-y-0 md:flex-row md:gap-10 "
       >
-        <figure className="sticky top-0 pt-16 md:pt-0 md:top-24 pb-2 h-fit bg-background md:w-1/2 px-4 z-20 md:h-full flex flex-row text-start font-semibold tracking-tight  border-b border-primary">
+        <figure className="sticky top-0 pt-14 md:pt-0 md:top-24 pb-2 h-fit bg-background md:w-1/2 px-4 z-20 md:h-full flex flex-row text-start font-semibold tracking-tight  border-b border-primary ">
           {/* <svg
             id="progress"
             width="75"
@@ -67,13 +70,13 @@ function Item({ title, sections }: Props) {
           <TextGradientScroll WhyUs={true} className={""} paragraph={title} />
           {/* <h1 className="text-6xl">Why work with us?</h1> */}
         </figure>
-        <div className="md:w-1/2 flex flex-col space-y-16 px-4 z-10">
+        <div className="md:w-1/2 flex flex-col space-y-16 px-4 z-10 pt-16 md:pt-0">
           {sections.map((section, index) => (
             <div key={index} className="flex flex-col space-y-6">
-              <h3 className="text-3xl md:text-5xl  tracking-tighter text-p">
+              <h3 className="text-2xl md:text-4xl  tracking-tighter ">
                 {section.title}
               </h3>
-              <p className="text-base md:text-lg tracking-tight text-muted-foreground">
+              <p className="text-lg md:text-2xl tracking-tight text-muted-foreground">
                 {section.content}
               </p>
             </div>
@@ -131,9 +134,13 @@ const sections2 = [
 
 export default function StickyScroll() {
   return (
-    <>
-      <Item title={"Why work with us?"} sections={sections1} />
-      <Item title={"How do we work?"} sections={sections2} />
-    </>
+    <div className="md:pt-[50vh]">
+      <Item
+        title={"Why work with us?"}
+        sections={sections1}
+        className="md:mb-32"
+      />
+      <Item title={"How do we work?"} sections={sections2} className="" />
+    </div>
   );
 }

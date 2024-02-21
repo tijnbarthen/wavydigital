@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const TeamSection = () => {
   return (
     <MaxWidthWrapper>
-      <SectionHeading title="Meet The Team. 👋" className="py-8" />
+      <SectionHeading title="Meet the team. 👋" className="py-8" />
       <div className="flex md:flex-row gap-4 flex-col">
         <motion.div
           initial={{ y: 100, opacity: 0 }} // Start off-screen to the left

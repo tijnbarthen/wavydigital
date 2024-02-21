@@ -45,8 +45,8 @@ export default function PricingPage() {
 
   return (
     <div className="isolate overflow-hidden bg-gradient-to-r from-blue-500 to-purple-500">
-      <div className="mx-auto max-w-7xl px-6 pb-96 pt-0 text-center sm:pt-0 lg:px-8">
-        <div className="mx-auto max-w-4xl text-white dark:text-secondary ">
+      <div className="mx-auto max-w-7xl px-4 pb-96 pt-0 text-center sm:pt-0 lg:px-6">
+        <div className="mx-auto max-w-4xl text-white dark:text-secondary">
           {/* <h2 className="text-base font-semibold leading-7 text-indigo-400">
             Pricing
           </h2> */}
@@ -88,12 +88,12 @@ export default function PricingPage() {
       </div>
       <div className="flow-root bg-background pb-24 sm:pb-32">
         <div className="-mt-80">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2">
               {tiers.map((tier) => (
                 <div
                   key={tier.id}
-                  className="flex flex-col justify-between rounded-3xl bg-background p-8 shadow-xl border border-primary/10 sm:p-10"
+                  className="flex flex-col justify-between rounded-3xl bg-secondary p-8 shadow-xl border border-primary/10 sm:p-10"
                 >
                   <div>
                     <h3

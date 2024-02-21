@@ -7,7 +7,7 @@ export default function LogoScroll() {
   const container = useRef(null);
   const stickyMask = useRef(null);
 
-  const initialMaskSize = 0.2;
+  const initialMaskSize = 0.25;
   const targetMaskSize = 30;
   const easing = 0.15;
   let easedScrollProgress = 0;
@@ -39,7 +39,7 @@ export default function LogoScroll() {
   };
 
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} pt-32`}>
       <div ref={container} className={styles.container}>
         <div ref={stickyMask} className={styles.stickyMask}>
           <div className="relative h-full w-full bg-gradient-to-r from-blue-500 to-purple-500">

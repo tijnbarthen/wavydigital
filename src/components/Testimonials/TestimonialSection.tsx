@@ -67,8 +67,8 @@ export default function TestimonialSection() {
       className={"relative top-[10vh] max-w-7xl mx-auto px-4 pb-10 md:pb-20"}
     >
       <TextGradientScroll
-        paragraph="And this is what our clients say about us. "
-        className="sticky  md:bottom-10 mx-auto flex justify-center "
+        paragraph="And this is what our clients say about us."
+        className="sticky  mx-auto flex justify-center "
         WhyUs={false}
       />
 

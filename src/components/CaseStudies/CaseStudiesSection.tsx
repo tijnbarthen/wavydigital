@@ -36,17 +36,17 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    isMobile ? ["25%", "-100%"] : ["90%", "-100%"]
+    isMobile ? ["75%", "-80%"] : ["90%", "-100%"]
   );
 
   return (
     <>
       <div className="max-w-7xl mx-auto mt-[60vh]">
-        <section ref={targetRef} className="relative h-[300vh]">
-          <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <section ref={targetRef} className="relative h-[300vh] ">
+          <div className="sticky top-0 flex h-screen items-center overflow-hidden mx-auto justify-center">
             <TextGradientScroll
               paragraph="Don't just take our word for it. Explore our projects."
-              className=" absolute mx-auto flex justify-center px-4"
+              className="absolute flex justify-center px-4 "
               WhyUs={false}
             />
 

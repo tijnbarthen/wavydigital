@@ -17,7 +17,7 @@ const CaseStudyCard = ({
 }) => {
   return (
     <motion.div
-      initial={{ y: 100, opacity: 0 }} // Start off-screen to the left
+      // initial={{ y: 100, opacity: 0 }} // Start off-screen to the left
       whileInView={{ y: 0, opacity: 1 }} // End at its final position, fully opaque
       viewport={{ once: true, amount: 0.4 }} // Configure when the animation triggers
     >

@@ -20,7 +20,9 @@ const SectionHeading = ({
       className={cn("flex flex-row gap-2 items-center py-8", className)}
     >
       <CornerDownRight className="h-6 w-6 md:self-center self-start" />
-      <h2 className="text-2xl  tracking-tight  font-semibold">{title}</h2>
+      <h2 className="text-2xl  md:text-3xl tracking-tight  font-semibold">
+        {title}
+      </h2>
     </motion.div>
   );
 };

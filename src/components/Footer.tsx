@@ -34,8 +34,8 @@ const footerLinks: FooterLink[] = [
 
 const Footer = () => {
   return (
-    <MaxWidthWrapper className=" py-6 md:py-8 bg-background">
-      <footer className="rounded-3xl flex justify-center shadow-xl border border-primary/10 items-center flex-col gap-16 10 py-36 relative md:bg-secondary">
+    <MaxWidthWrapper className=" py-4 md:py-8 bg-background">
+      <footer className="rounded-3xl flex justify-center shadow-xl border border-primary/10 items-center flex-col gap-16  py-36 relative md:bg-secondary">
         <h1 className="font-semibold max-w-3xl text-5xl lg:text-7xl  tracking-tight text-center">
           Ready to discuss your next big idea?
         </h1>

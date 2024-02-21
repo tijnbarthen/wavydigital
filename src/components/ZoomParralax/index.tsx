@@ -119,40 +119,41 @@ export default function ZoomParallax() {
 
 import { useEffect, useState } from "react";
 
-const WaveText = () => {
-  const { scrollYProgress } = useScroll();
-  const [xRange, setXRange] = useState(["-100%", "100%"]);
+// const WaveText = () => {
+//   const { scrollYProgress } = useScroll();
+//   const [xRange, setXRange] = useState(["-100%", "100%"]);
 
-  useEffect(() => {
-    // Determine if the device is mobile or not based on the window width
-    const isMobile = window.innerWidth < 768; // Example breakpoint for mobile devices
+//   useEffect(() => {
+//     // Determine if the device is mobile or not based on the window width
+//     const isMobile = window.innerWidth < 768; // Example breakpoint for mobile devices
 
-    // Adjust the range values for mobile devices
-    if (isMobile) {
-      setXRange(["-125%", "250%"]); // Less movement on mobile
-    } else {
-      setXRange(["-79%", "200%"]); // More movement on desktop
-    }
-  }, []);
+//     // Adjust the range values for mobile devices
+//     if (isMobile) {
+//       setXRange(["-125%", "250%"]); // Less movement on mobile
+//     } else {
+//       setXRange(["-79%", "200%"]); // More movement on desktop
+//     }
+//   }, []);
 
-  const xValue = useTransform(scrollYProgress, [0, 1], xRange);
+//   const xValue = useTransform(scrollYProgress, [0, 1], xRange);
 
-  return (
-    <div className="flex justify-center items-center my-auto h-full overflow-hidden">
-      <motion.div
-        key={1}
-        style={{ x: xValue }}
-        className="text-sm md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"
-      >
-        But we are here to help.
-      </motion.div>
-    </div>
-  );
-};
+//   return (
+//     <div className="flex justify-center items-center my-auto h-full overflow-hidden">
+//       <motion.div
+//         key={1}
+//         style={{ x: xValue }}
+//         className="text-lg md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"
+//       >
+//         But we are here to help.
+//       </motion.div>
+//     </div>
+//   );
+// };
 
 const WaveTextVertical = () => {
   return (
-    <motion.p className="h-full  text-center w-full text-xs md:text-3xl  absolute flex items-center justify-center  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+    // <motion.p className="h-full  text-center w-full text-xs md:text-3xl  absolute flex items-center justify-center  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+    <motion.p className="h-full text-center w-full text-xs md:text-xl absolute flex items-center justify-center font-bold px-1">
       But we are here to help.
     </motion.p>
   );

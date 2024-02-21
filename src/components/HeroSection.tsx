@@ -11,7 +11,7 @@ const HeroSection = () => {
     <MaxWidthWrapper className="py-16">
       <PageHeader
         title="Wavy Digital."
-        subtitle="Business. Savvy. Tech."
+        subtitle="Business. Savvy."
         description="At WavyDigital, we bring entrepreneurial vision and coding expertise together for a successful tech product — fast, reliable, and with a dash of fun."
       />
 
@@ -26,7 +26,7 @@ const HeroSection = () => {
           <img
             src="https://images.unsplash.com/photo-1638742385167-96fc60e12f59?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="h-full w-full object-cover rounded-3xl"
-            alt=""
+            alt="image banner"
           />
           <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white dark:text-[#E6E6E6] tracking-tight flex justify-center items-center">
             We build. We grow. We scale.
