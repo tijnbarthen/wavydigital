@@ -42,7 +42,9 @@ const Card = ({
   return (
     <div
       ref={container}
-      className={"h-[100vh] flex items-center justify-center sticky top-16"}
+      className={
+        "h-[100vh] flex items-center justify-center sticky top-16 pt-10 md:pt-24"
+      }
     >
       <motion.div
         style={{

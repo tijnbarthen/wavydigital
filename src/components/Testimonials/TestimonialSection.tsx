@@ -64,11 +64,11 @@ export default function TestimonialSection() {
   return (
     <main
       ref={container}
-      className={"relative top-[10vh] max-w-7xl mx-auto px-4 "}
+      className={"relative top-[10vh] max-w-7xl mx-auto px-4 pb-10 md:pb-20"}
     >
       <TextGradientScroll
         paragraph="And this is what our clients say about us. "
-        className="sticky bottom-10 mx-auto flex justify-center "
+        className="sticky  md:bottom-10 mx-auto flex justify-center "
         WhyUs={false}
       />
 

@@ -36,12 +36,12 @@ function Item({ title, sections }: Props) {
   //   fill: none;
   // }
   return (
-    <section className="h-[130vh] md:h-[100vh] flex justify-center items-center max-w-7xl mx-auto">
+    <section className="h-[130vh] md:h-[100vh] flex justify-center items-center max-w-7xl mx-auto m">
       <div
         ref={ref}
-        className="w-full relative flex flex-col space-y-10 md:space-y-0 md:flex-row md:gap-10"
+        className="w-full relative flex flex-col space-y-10 md:space-y-0 md:flex-row md:gap-10 "
       >
-        <figure className="sticky top-0 pt-20 md:pt-0 md:top-16 pb-2 h-fit bg-background w-1/2  z-20 md:h-full flex flex-row text-start font-semibold tracking-tight  border-b border-primary">
+        <figure className="sticky top-0 pt-16 md:pt-0 md:top-24 pb-2 h-fit bg-background md:w-1/2 px-4 z-20 md:h-full flex flex-row text-start font-semibold tracking-tight  border-b border-primary">
           {/* <svg
             id="progress"
             width="75"

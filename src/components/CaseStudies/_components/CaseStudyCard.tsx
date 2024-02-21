@@ -23,7 +23,7 @@ const CaseStudyCard = ({
     >
       <Card
         className={cn(
-          " bg-slate-100 p-4 border-none dark:border-2 dark:border-white w-[350px] md:w-[500px] relative",
+          " bg-secondary p-4 border-none dark:border-2 dark:border-primary w-[350px] md:w-[500px] relative",
           className
         )}
       >
@@ -37,7 +37,7 @@ const CaseStudyCard = ({
               "https://framerusercontent.com/images/IwQGpm16IrG3DUIAqlXEFJefk.png?scale-down-to=1024"
             }
             alt=""
-            className="hover:grow h-96 w-96 object-contain"
+            className="hover:grow h-[50vh] md:h-96 w-[50vw] md:w-96 object-contain"
           />
         </div>
         <div className="flex flex-row justify-between">
@@ -48,7 +48,8 @@ const CaseStudyCard = ({
             </div>
           </div>
           <div className="self-end">
-            <motion.div
+            <Button variant={"default"}>Read Case Study</Button>
+            {/* <motion.div
               whileHover={{
                 scale: 1.05,
                 borderColor: "#f9a8d4",
@@ -59,7 +60,7 @@ const CaseStudyCard = ({
               className="mt-4 rounded-2xl "
             >
               <Button variant={"default"}>Read Case Study</Button>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </Card>
