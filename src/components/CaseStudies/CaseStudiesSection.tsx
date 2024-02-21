@@ -9,6 +9,16 @@ import TextGradientScroll from "../TextGradientScroll";
 import { useInView } from "react-intersection-observer";
 
 const Example = () => {
+  return <HorizontalScrollCarousel />;
+};
+
+const HorizontalScrollCarousel = () => {
+  const targetRef = useRef<HTMLDivElement | null>(null);
+  const textRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -18,15 +28,6 @@ const Example = () => {
     }
 
     requestAnimationFrame(raf);
-  }, []);
-  return <HorizontalScrollCarousel />;
-};
-
-const HorizontalScrollCarousel = () => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
-  const textRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
   });
 
   // Use media query to determine screen size
@@ -41,12 +42,12 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto mt-[60vh]">
+      <div className=" mx-auto mt-[60vh]">
         <section ref={targetRef} className="relative h-[300vh] ">
           <div className="sticky top-0 flex h-screen items-center overflow-hidden mx-auto justify-center">
             <TextGradientScroll
               paragraph="Don't just take our word for it. Explore our projects."
-              className="absolute flex justify-center px-4 "
+              className="absolute max-w-7xl flex justify-center px-4 "
               WhyUs={false}
             />
 

@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { useEffect } from "react";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,7 +34,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SmoothScroll />
           <Navbar />
           <div className="fixed bottom-4 right-4 z-[100]">
             <ThemeToggle />

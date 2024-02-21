@@ -2,10 +2,11 @@
 import { CheckIcon } from "lucide-react";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FadeIn, FadeInStagger } from "./FadeIn";
 import TextGradientScroll from "./TextGradientScroll";
 import { Button } from "./ui/button";
+import Lenis from "@studio-freight/lenis";
 
 const tiers = [
   {
@@ -42,6 +43,17 @@ const tiers = [
 export default function PricingPage() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
 
   return (
     <div className="isolate overflow-hidden bg-gradient-to-r from-blue-500 to-purple-500">

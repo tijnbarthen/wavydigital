@@ -2,12 +2,13 @@
 import { useRef, useEffect } from "react";
 import styles from "./page.module.css";
 import PricingPage from "../PricingPage";
+import Lenis from "@studio-freight/lenis";
 
 export default function LogoScroll() {
   const container = useRef(null);
   const stickyMask = useRef(null);
 
-  const initialMaskSize = 0.25;
+  const initialMaskSize = 0.3;
   const targetMaskSize = 30;
   const easing = 0.15;
   let easedScrollProgress = 0;
@@ -15,6 +16,17 @@ export default function LogoScroll() {
   useEffect(() => {
     requestAnimationFrame(animate);
   }, []);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
 
   const animate = () => {
     const maskSizeProgress = targetMaskSize * getScrollProgress();

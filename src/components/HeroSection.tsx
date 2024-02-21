@@ -5,8 +5,21 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import PageHeader from "./PageHeader";
 import { Badge } from "./ui/badge";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 const HeroSection = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+
   return (
     <MaxWidthWrapper className="py-16">
       <PageHeader

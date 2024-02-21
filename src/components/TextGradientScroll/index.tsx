@@ -17,6 +17,7 @@ export default function TextGradientScroll({
   paragraph,
 }: Props) {
   const words = paragraph.split(" ");
+
   return (
     <main
       className={cn(

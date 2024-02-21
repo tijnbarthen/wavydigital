@@ -10,16 +10,16 @@ import SectionHeading from "../SectionHeading";
 import Lenis from "@studio-freight/lenis";
 
 export default function ZoomParallax() {
-  useEffect(() => {
-    const lenis = new Lenis();
+  // useEffect(() => {
+  //   const lenis = new Lenis();
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  //   function raf(time: number) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
 
-    requestAnimationFrame(raf);
-  }, []);
+  //   requestAnimationFrame(raf);
+  // }, []);
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({

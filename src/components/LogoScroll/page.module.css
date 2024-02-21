@@ -4,7 +4,7 @@
 
 .container {
   position: relative;
-  height: 200vh;
+  height: 180vh;
 }
 
 .stickyMask {
@@ -18,7 +18,7 @@
   mask-image: url("/medias/logowavydigital.svg");
   mask-position: 50% center;
   mask-repeat: no-repeat;
-  mask-size: 80%;
+  mask-size: 30%;
 }
 
 /* .stickyMask video {
