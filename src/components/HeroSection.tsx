@@ -94,7 +94,7 @@ const HeroSection = () => {
             className="lg:h-32 h-20 w-full relative text-center"
           >
             <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
-              Business.
+              Platforms.
             </h1>
             <img
               src="https://images.unsplash.com/photo-1548350896-fafc317d3ceb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGdyYWRpZW50fGVufDB8MHwwfHx8MA%3D%3D"

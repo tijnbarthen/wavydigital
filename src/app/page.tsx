@@ -1,5 +1,7 @@
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import HeroSection from "@/components/HeroSection";
+import LogoScroll from "@/components/LogoScroll";
+import PricingPage from "@/components/PricingPage";
 import StickyScroll from "@/components/StickyScroll";
 import TeamSection from "@/components/TeamSection";
 import TestimonialSection from "@/components/Testimonials/TestimonialSection";
@@ -14,6 +16,8 @@ export default function Home() {
       <StickyScroll />
       <CaseStudiesSection />
       <TestimonialSection />
+      <LogoScroll />
+      <PricingPage />
     </>
   );
 }
