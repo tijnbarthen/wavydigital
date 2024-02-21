@@ -6,7 +6,7 @@ import Character from "./_components/Character";
 import React from "react";
 
 type Props = {
-  className: string;
+  className?: string;
   paragraph: string;
   WhyUs?: boolean;
 };
