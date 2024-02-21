@@ -4,17 +4,33 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
-const CaseStudyCard = ({ image }: { image?: string }) => {
+const CaseStudyCard = ({
+  image,
+  className,
+  ownProject,
+}: {
+  image?: string;
+  className?: string;
+  ownProject?: boolean;
+}) => {
   return (
     <motion.div
       initial={{ y: 100, opacity: 0 }} // Start off-screen to the left
       whileInView={{ y: 0, opacity: 1 }} // End at its final position, fully opaque
       transition={{ duration: 0.7, delay: 0.1 }} // Adjust timing and delay here
       viewport={{ once: true, amount: 0.4 }} // Configure when the animation triggers
-      className=""
     >
-      <Card className=" bg-slate-100 p-6 border-none dark:border-2 dark:border-white w-[350px] md:w-[500px]">
+      <Card
+        className={cn(
+          " bg-slate-100 p-4 border-none dark:border-2 dark:border-white w-[350px] md:w-[500px] relative",
+          className
+        )}
+      >
+        <Badge variant={"secondary"} className="absolute top-4 right-4">
+          {ownProject ? "Own Project" : "Client Project"}
+        </Badge>
         <div className="flex justify-center">
           <img
             src={
@@ -43,16 +59,7 @@ const CaseStudyCard = ({ image }: { image?: string }) => {
               transition={{ duration: 0.3 }}
               className="mt-4 rounded-2xl "
             >
-              <Button variant={"default"}>
-                <motion.span
-                  whileHover={{
-                    color: "#f9a8d4",
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  Read Case Study
-                </motion.span>
-              </Button>
+              <Button variant={"default"}>Read Case Study</Button>
             </motion.div>
           </div>
         </div>
