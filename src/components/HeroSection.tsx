@@ -15,13 +15,13 @@ const HeroSection = () => {
         description="At WavyDigital, we bring entrepreneurial vision and coding expertise together for a successful tech product — fast, reliable, and with a dash of fun."
       />
 
-      <div className="mt-10 flex flex-col gap-4">
+      <div className="mt-10 flex flex-col gap-4 relative">
         <motion.div
           initial={{ y: 100, opacity: 0 }} // Start off-screen to the left
           whileInView={{ y: 0, opacity: 1 }} // End at its final position, fully opaque
           transition={{ duration: 0.5, delay: 0.1 }} // Adjust timing and delay here
           viewport={{ once: true, amount: 0.5 }} // Configure when the animation triggers
-          className="lg:h-32 h-20 w-full relative"
+          className="lg:h-32 h-20 w-full relative "
         >
           <img
             src="https://images.unsplash.com/photo-1638742385167-96fc60e12f59?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -109,11 +109,12 @@ const HeroSection = () => {
           whileInView={{ y: 0, opacity: 1 }} // End at its final position, fully opaque
           transition={{ duration: 0.5, delay: 0.4 }} // Adjust timing and delay here
           viewport={{ once: true, amount: 0.5 }} // Configure when the animation triggers
-          className="lg:h-32 h-20 w-full relative bg-gradient-to-br  from-blue-500 rounded-3xl flex justify-center items-center to-yellow-500"
+          className="lg:h-32 h-20 w-full relative bg-gradient-to-br  from-white rounded-3xl flex justify-center items-center to-blue-500 overflow-hidden"
         >
-          <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center">
+          <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white tracking-tight flex justify-center items-center z-1000">
             🚀 {"  "}Ready for launch?
           </h1>
+          <Meteors number={100} />
 
           {/* <img
             src="https://images.unsplash.com/photo-1638742385167-96fc60e12f59?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

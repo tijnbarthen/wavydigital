@@ -48,7 +48,7 @@ export const TextGenerateEffect = ({
 
   return (
     <motion.div ref={ref} className={cn("font-bold", className)}>
-      <div className="mt-4">
+      <div className="mt-0">
         <div className="xl:flex xl:flex-row font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 text-6xl leading-snug tracking-wide">
           {renderWords()}
           <h1 className="flex items-center text-6xl tracking-tight">

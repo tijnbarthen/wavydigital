@@ -2,7 +2,7 @@ import { TextGenerateEffect } from "./TextGenerateEffect";
 
 type HeaderProps = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: string;
 };
 
@@ -13,10 +13,12 @@ const PageHeader = ({ title, subtitle, description }: HeaderProps) => {
         <h1 className="text-6xl md:text-7xl font-extrabold tracking-tighter">
           {title}
         </h1>
-        <TextGenerateEffect
-          words={"Business. Savvy."}
-          className="from-purple-600 font-extrabold to-blue-600 bg-clip-text text-transparent bg-gradient-to-r text-6xl md:text-7xl  pb-2 tracking-tight"
-        />
+        {subtitle && (
+          <TextGenerateEffect
+            words={"Business. Savvy."}
+            className="from-purple-600 font-extrabold to-blue-600 bg-clip-text text-transparent bg-gradient-to-r text-6xl md:text-7xl  pb-2 tracking-tight"
+          />
+        )}
 
         {/* <h1 className="from-purple-600 font-extrabold to-blue-600 bg-clip-text text-transparent bg-gradient-to-r text-6xl md:text-7xl  pb-2 tracking-tighter">
           {subtitle}
