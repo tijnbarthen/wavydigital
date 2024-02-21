@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="h-full lenis">
+    <html lang="en" suppressHydrationWarning className="h-full  lenis">
       <head />
       <body
         className={cn(
