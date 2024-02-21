@@ -110,11 +110,20 @@ export default function WhatWeOffer() {
       <MaxWidthWrapper className="">
         <SectionHeading title="Why work with us?" className="py-8" />
         {features.map((feature, index) => (
-          <Item title={feature.benefit} description={feature.description} />
+          <Item
+            key={index}
+            title={feature.benefit}
+            description={feature.description}
+          />
         ))}
         <SectionHeading title="How we work." className="py-8" />
         {howWeWork.map((work, index) => (
-          <Item title={work.duration} description={work.task} inverted={true} />
+          <Item
+            key={work.duration}
+            title={work.duration}
+            description={work.task}
+            inverted={true}
+          />
         ))}
       </MaxWidthWrapper>
     </>
