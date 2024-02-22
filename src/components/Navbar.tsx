@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 
 import React from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import { AnimatedHamburgerButton } from "./AnimatedHamburgerButton";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -31,8 +32,8 @@ export default function Navbar({ tokens }: Props) {
   const pathname = usePathname();
 
   return (
-    <header className=" block top-0 inset-x-0 z-50 border-b border-black h-16">
-      <MaxWidthWrapper className="py-0">
+    <header className=" block top-0 inset-x-0 z-50 border-b border-secondary h-16">
+      <MaxWidthWrapper className="py-0 md:py-0">
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between sm:justify-none gap-x-6 h-16"
           aria-label="Global"
@@ -96,7 +97,7 @@ export default function Navbar({ tokens }: Props) {
                         alt="WavyDigital Logo"
                       />
                     </Link>
-                    <Button
+                    {/* <Button
                       type="button"
                       className="p-0"
                       variant={"ghost"}
@@ -104,7 +105,8 @@ export default function Navbar({ tokens }: Props) {
                     >
                       <span className="sr-only">Close menu</span>
                       <X className="h-10 w-10" aria-hidden="true" />
-                    </Button>
+                    </Button> */}
+                    <AnimatedHamburgerButton />
                   </div>
                   <div className="mt-6 flow-root">
                     <div className="-my-6 divide-y divide-gray-500/10">
