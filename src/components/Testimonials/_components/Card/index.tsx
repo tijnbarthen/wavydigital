@@ -50,12 +50,13 @@ const Card = ({
         style={{
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
+          backgroundColor: color,
         }}
         className={
-          "flex flex-col gap-y-4 items-center relative justify-between mx-auto top-[-25%] h-[500px] w-[1100px] rounded-lg origin-top bg-gradient-to-r from-blue-600  to-purple-600 p-1"
+          "flex flex-col gap-y-4 items-center relative justify-between mx-auto top-[-25%] h-[500px] w-[600px] md:w-[1000px] rounded-lg origin-top"
         }
       >
-        <div className="flex h-full w-full items-center justify-between py-10 bg-secondary back px-8 md:px-20  rounded-lg relative mx-auto  flex-col">
+        <div className="flex h-full w-full items-center justify-between py-10 back px-8  rounded-lg relative mx-auto flex-col border-4 border-primary text-[#E6E6E6]">
           <div className="h-[60px] md:h-[100px] w-[120px] md:w-[200px]">
             <Image
               src={src}
@@ -66,16 +67,23 @@ const Card = ({
             />
           </div>
 
-          <h2 className="text-center text-lg md:text-4xl font-bold">{title}</h2>
-          <p className="text-lg italic">{description}</p>
-          <div className="h-16 w-16">
+          <p className="text-xl tracking-tight italic text-[#E6E6E6] md:text-3xl font-bold text-center">
+            {description}
+          </p>
+          <div className="flex justify-center items-center gap-4">
             <Image
-              alt="image"
+              alt=""
               src={src}
-              className="object-cover h-full w-full rounded-full"
+              className="object-cover h-16 w-16 rounded-full"
               height={50}
               width={50}
             />
+            <div className="flex flex-col w-full">
+              <h2 className="text-start tracking-tight text-2xl md:text-3xl font-bold text-[#E6E6E6]">
+                {title}
+              </h2>
+              <p className="text-start tracking-tight text-lg">CEO of Lokers</p>
+            </div>
           </div>
         </div>
       </motion.div>
