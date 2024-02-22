@@ -3,12 +3,13 @@ import { useRef, useEffect } from "react";
 import styles from "./page.module.css";
 import PricingPage from "../PricingPage";
 import Lenis from "@studio-freight/lenis";
+import TextGradientScroll from "../TextGradientScroll";
 
 export default function LogoScroll() {
   const container = useRef(null);
   const stickyMask = useRef(null);
 
-  const initialMaskSize = 0.3;
+  const initialMaskSize = 0.35;
   const targetMaskSize = 30;
   const easing = 0.15;
   let easedScrollProgress = 0;
@@ -51,16 +52,23 @@ export default function LogoScroll() {
   };
 
   return (
-    <main className={`${styles.main} pt-32`}>
+    <main className={`${styles.main} pt-0`}>
       <div ref={container} className={styles.container}>
         <div ref={stickyMask} className={styles.stickyMask}>
-          <div className="relative h-full w-full bg-gradient-to-r from-blue-500 to-purple-500">
+          <div className="relative h-full w-full bg-gradient-to-r from-blue-500 to-purple-500 flex  justify-center">
             {/* <PricingPage /> */}
           </div>
           {/* <video autoPlay muted loop>
             <source src="/medias/nature.mp4" type="video/mp4" />
           </video> */}
         </div>
+      </div>
+      <div className="h-[100vh] bg-gradient-to-r from-blue-500 to-purple-500 relative">
+        <TextGradientScroll
+          paragraph="We are here to help."
+          className="mx-auto sticky pt-[50vh] px-4 justify-center flex text-background -mb-20"
+          WhyUs={true}
+        />
       </div>
     </main>
   );

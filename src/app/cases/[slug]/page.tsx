@@ -53,7 +53,9 @@ const CaseStudyPage = ({ params: { slug } }: { params: { slug: string } }) => {
               <h3 className="text-lg md:text-xl font-semibold">Skills</h3>
               <div className="mt-1 flex gap-2 md:justify-end flex-wrap">
                 {caseStudy.skills.map((skill, index) => (
-                  <Badge className="mt-1 py-1 px-3 text-sm">{skill}</Badge>
+                  <Badge key={index} className="mt-1 py-1 px-3 text-sm">
+                    {skill}
+                  </Badge>
                 ))}
               </div>
             </div>

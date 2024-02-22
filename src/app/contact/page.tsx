@@ -1,6 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import PageHeader from "@/components/PageHeader";
+import PricingPage from "@/components/PricingPage";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,28 +10,21 @@ import { ArrowRight } from "lucide-react";
 const ContactPage = () => {
   return (
     <>
-      <MaxWidthWrapper className="py-24">
+      <MaxWidthWrapper>
         <PageHeader
           title="Contact Us."
-          subtitle="Realise. Your. Vision."
-          description="Don't hesitate to reach out to us. We are here to help you realise your vision. And we are here to help you make it a reality."
+          contact={{
+            emailTitle: "Send us an email",
+            emailAdress: "info@wavydigital.io",
+            phoneTitle: "Or call us",
+            phoneNumer: "06 - 23218709",
+            openingDays: "Everyday",
+            openingTime: "09:00 - 19:00",
+          }}
         />
       </MaxWidthWrapper>
-      <BentoSection className="w-full bg-white border-4 mb-8">
-        <ContactForm />
-      </BentoSection>
-      <BentoSection className={"bg-slate-500 justify-center items-center"}>
-        <h1 className="font-semibold text-5xl lg:text-7xl text-white text-center">
-          Schedule a call with us.
-        </h1>
-        <Button
-          variant="outline"
-          size={"lg"}
-          className="py-8 rounded-full font-bold text-lg"
-        >
-          Schedule a call with us <ArrowRight className="ml-2" />
-        </Button>
-      </BentoSection>
+      <PricingPage />
+      <ContactForm />
     </>
   );
 };

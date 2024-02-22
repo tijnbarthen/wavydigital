@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useEffect } from "react";
+import { Toaster } from "@/components/ui/toaster";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
           <div className="fixed bottom-4 right-4 z-[100]">
             <ThemeToggle />
           </div>
+          <Toaster />
 
           {children}
           <Footer />
