@@ -84,7 +84,7 @@ export default function ZoomParallax() {
                       <Image
                         src={src}
                         fill
-                        alt="image"
+                        alt="Background Image of waves"
                         className="object-cover brightness-75"
                       />
                       <WaveTextVertical />
@@ -102,7 +102,7 @@ export default function ZoomParallax() {
                       <Image
                         src={src}
                         fill
-                        alt="image"
+                        alt="background image of waves"
                         className="object-cover"
                       />
                     </div>

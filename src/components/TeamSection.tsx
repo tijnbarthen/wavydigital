@@ -23,6 +23,7 @@ const TeamSection = () => {
             <img
               src={"/suave.png"}
               className="w-full h-96 object-cover rounded-lg"
+              alt="Image of Luke Suvaal, Owner At WavyDigital"
             />
           </Card>
           <div className="flex flex-col gap-1">
@@ -40,6 +41,7 @@ const TeamSection = () => {
             <img
               src={"/tonski.png"}
               className="w-full h-96 object-cover rounded-lg"
+              alt="Image of Tijn, Owner at WavyDigital"
             />
           </Card>
           <div className="flex flex-row gap-2">

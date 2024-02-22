@@ -59,7 +59,7 @@ const Card = ({
           <div className="h-[60px] md:h-[100px] w-[120px] md:w-[200px]">
             <Image
               src={src}
-              alt="image"
+              alt="Image of a person"
               height={800}
               width={400}
               className="object-cover  rounded-lg"

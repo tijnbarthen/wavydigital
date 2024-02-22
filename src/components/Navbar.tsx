@@ -41,7 +41,11 @@ export default function Navbar({ tokens }: Props) {
             <Link href="/" className="">
               <div className="flex flex-row items-center">
                 <span className="sr-only">WavyDigital</span>
-                <img src="/logowavydigital.png" className="h-8 w-8" />
+                <img
+                  src="/logowavydigital.png"
+                  className="h-8 w-8"
+                  alt="WavyDigital Logo"
+                />
               </div>
             </Link>
           </div>
@@ -86,7 +90,11 @@ export default function Navbar({ tokens }: Props) {
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <span className="sr-only">WavyDigital</span>
-                      <img src="/logowavydigital.png" className="h-8 w-8" />
+                      <img
+                        src="/logowavydigital.png"
+                        className="h-8 w-8"
+                        alt="WavyDigital Logo"
+                      />
                     </Link>
                     <Button
                       type="button"

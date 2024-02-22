@@ -38,8 +38,8 @@ const HeroSection = () => {
         >
           <img
             src="https://images.unsplash.com/photo-1638742385167-96fc60e12f59?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            className="h-full w-full object-cover rounded-3xl"
-            alt="image banner"
+            className="h-full w-full object-cover rounded-3xl brightness-75"
+            alt="Gradient Background Image"
           />
           <h1 className="text-xl md:text-4xl absolute top-0 left-0 h-full w-full font-bold text-white dark:text-[#E6E6E6] tracking-tight flex justify-center items-center">
             We build. We grow. We scale.
@@ -56,7 +56,7 @@ const HeroSection = () => {
             <img
               src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3JhZGllbnR8ZW58MHx8MHx8fDA%3D"
               className="h-full w-full object-cover rounded-3xl"
-              alt=""
+              alt="Gradient Background Image"
             />
             <h1 className="text-lg md:text-3xl absolute top-0 left-0 h-full w-full font-bold text-white dark:text-[#E6E6E6] tracking-tight flex justify-center items-center">
               E-Commerce.
@@ -96,7 +96,7 @@ const HeroSection = () => {
             <img
               src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGdyYWRpZW50fGVufDB8MHwwfHx8MA%3D%3D"
               className="h-full w-full object-cover rounded-3xl"
-              alt=""
+              alt="Gradient Background Image"
             />
           </motion.div>
           <motion.div
@@ -112,7 +112,7 @@ const HeroSection = () => {
             <img
               src="https://images.unsplash.com/photo-1548350896-fafc317d3ceb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGdyYWRpZW50fGVufDB8MHwwfHx8MA%3D%3D"
               className="h-full w-full object-cover rounded-3xl "
-              alt=""
+              alt="Gradient Background Image"
             />
           </motion.div>
         </div>

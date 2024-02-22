@@ -14,6 +14,11 @@ export const fontSans = FontSans({
   variable: "--font-sans",
 });
 
+export const meta: Metadata = {
+  title: "Wavy Digital",
+  description: "Wavy Digital - Business Savvy Coders .",
+};
+
 export default function RootLayout({
   children,
 }: {
