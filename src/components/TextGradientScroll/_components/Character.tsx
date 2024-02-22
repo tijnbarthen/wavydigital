@@ -29,8 +29,8 @@ export default function Paragraph({ WhyUs, paragraph }: ParagraphProps) {
       ref={container}
       className={` font-bold tracking-tight flex max-w-7xl  flex-wrap  ${
         WhyUs === true
-          ? "text-4xl md:text-6xl"
-          : "pt-10 h-1 md:justify-center mx-auto text-4xl md:text-6xl"
+          ? "text-3xl sm:text-4xl md:text-6xl"
+          : "pt-10 h-1 md:justify-center mx-auto text-3xl sm:text-4xl md:text-6xl"
       }`}
     >
       {words.map((word, i) => {

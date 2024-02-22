@@ -65,7 +65,7 @@ export default function LogoScroll() {
       </div>
       <div className="h-[100vh] bg-gradient-to-r from-blue-500 to-purple-500 relative">
         <TextGradientScroll
-          paragraph="But we are here to help."
+          paragraph="We are here to help."
           className="mx-auto sticky pt-[50vh] px-4 justify-center flex text-background -mb-20"
           WhyUs={true}
         />
