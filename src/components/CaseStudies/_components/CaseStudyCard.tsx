@@ -32,10 +32,7 @@ const CaseStudyCard = ({
         </Badge>
         <div className="flex justify-center">
           <img
-            src={
-              image ||
-              "https://framerusercontent.com/images/IwQGpm16IrG3DUIAqlXEFJefk.png?scale-down-to=1024"
-            }
+            src={image || "/gigBezorgd.webp"}
             alt="Preview of GiG Bezorgd Case Study"
             className="hover:grow h-[50vh] md:h-96 w-[50vw] md:w-96 object-contain"
           />
