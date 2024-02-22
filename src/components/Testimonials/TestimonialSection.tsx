@@ -1,10 +1,8 @@
 "use client";
-import styles from "./style.module.scss";
 import { useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import Card from "./_components/Card";
-import { TextGenerateEffect } from "../TextGenerateEffect";
 import TextGradientScroll from "../TextGradientScroll";
 
 const projects = [
@@ -68,7 +66,7 @@ export default function TestimonialSection() {
     >
       <TextGradientScroll
         paragraph="And this is what our clients say about us."
-        className="sticky  mx-auto flex justify-center "
+        className="sticky mx-auto flex justify-center "
         WhyUs={false}
       />
 

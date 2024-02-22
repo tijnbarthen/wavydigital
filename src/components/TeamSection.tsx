@@ -6,11 +6,18 @@ import { Card } from "./ui/card";
 import PageHeader from "./PageHeader";
 import SectionHeading from "./SectionHeading";
 import { motion } from "framer-motion";
+import { TextGenerateEffect } from "./TextGenerateEffect";
+import TextGradientScroll from "./TextGradientScroll";
 
 const TeamSection = () => {
   return (
     <MaxWidthWrapper>
-      <SectionHeading title="Meet the team. 👋" className="py-8" />
+      <TextGradientScroll
+        paragraph="Meet the team."
+        className="py-8"
+        WhyUs={true}
+      />
+      {/* <SectionHeading title="Meet the team. 👋" className="py-8" /> */}
       <div className="flex md:flex-row gap-4 flex-col">
         <motion.div
           initial={{ y: 100, opacity: 0 }} // Start off-screen to the left
