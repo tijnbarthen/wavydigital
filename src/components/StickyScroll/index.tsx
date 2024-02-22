@@ -72,11 +72,11 @@ function Item({ className, title, sections }: Props) {
         </figure>
         <div className="md:w-1/2 flex flex-col space-y-16 px-4 z-10 pt-16 md:pt-0">
           {sections.map((section, index) => (
-            <div key={index} className="flex flex-col space-y-6">
-              <h3 className="text-2xl md:text-4xl  tracking-tighter ">
+            <div key={index} className="flex flex-col space-y-4">
+              <h3 className="text-2xl md:text-3xl font-medium tracking-tighter ">
                 {section.title}
               </h3>
-              <p className="text-lg md:text-2xl tracking-tight text-muted-foreground">
+              <p className="text-lg md:text-2xl tracking-tight font-medium text-muted-foreground">
                 {section.content}
               </p>
             </div>

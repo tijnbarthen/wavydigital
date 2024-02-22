@@ -49,7 +49,7 @@ const Footer = () => {
             -&gt;
           </span>
         </Button>
-        <div className="flex justify-center gap-6 flex-wrap">
+        <div className="flex justify-center gap-6 px-4 flex-wrap">
           {footerLinks.map((link) => (
             <Link
               key={link.title}

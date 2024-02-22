@@ -62,7 +62,9 @@ const Word = ({ children, progress, range, WhyUs }: WordProps) => {
   const amount = range[1] - range[0];
   const step = amount / children.length;
   return (
-    <span className={`relative mr-4 ${WhyUs === true ? "" : "top-4"}`}>
+    <span
+      className={`relative mr-1.5 md:mr-2 ${WhyUs === true ? "" : "top-4"}`}
+    >
       {children.split("").map((char, i) => {
         const start = range[0] + i * step;
         const end = range[0] + (i + 1) * step;

@@ -80,7 +80,7 @@ export default function ZoomParallax() {
               <motion.div key={index} style={{ scale }} className={styles.el}>
                 <div className={styles.imageContainer}>
                   {id === 1 ? (
-                    <div className="h-full relative mx-auto ">
+                    <div className="h-full relative mx-auto flex justify-center">
                       <Image
                         src={src}
                         fill
@@ -153,8 +153,9 @@ import { useEffect, useState } from "react";
 const WaveTextVertical = () => {
   return (
     // <motion.p className="h-full  text-center w-full text-xs md:text-3xl  absolute flex items-center justify-center  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-    <motion.p className="h-full text-center w-full text-xs md:text-xl absolute flex items-center justify-center font-bold px-1">
-      But we are here to help.
+    <motion.p className="h-full text-center w-full text-xs md:text-xl absolute flex items-center justify-center font-bold px-1 text-white max-w-lg mx-auto">
+      But we are here to help you navigate the rough waters of the digital
+      world.
     </motion.p>
   );
 };

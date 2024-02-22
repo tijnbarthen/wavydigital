@@ -48,34 +48,35 @@ const Card = ({
     >
       <motion.div
         style={{
-          backgroundColor: color,
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
         className={
-          "flex px-8 md:px-20 py-10 flex-col gap-y-4 items-center relative justify-between mx-auto top-[-25%] h-[500px] w-[1100px] rounded-lg origin-top"
+          "flex flex-col gap-y-4 items-center relative justify-between mx-auto top-[-25%] h-[500px] w-[1100px] rounded-lg origin-top bg-gradient-to-r from-blue-600  to-purple-600 p-1"
         }
       >
-        <div className="h-[60px] md:h-[100px] w-[120px] md:w-[200px]">
-          <Image
-            src={src}
-            alt="image"
-            height={800}
-            width={400}
-            className="object-cover  rounded-lg"
-          />
-        </div>
+        <div className="flex h-full w-full items-center justify-between py-10 bg-secondary back px-8 md:px-20  rounded-lg relative mx-auto  flex-col">
+          <div className="h-[60px] md:h-[100px] w-[120px] md:w-[200px]">
+            <Image
+              src={src}
+              alt="image"
+              height={800}
+              width={400}
+              className="object-cover  rounded-lg"
+            />
+          </div>
 
-        <h2 className="text-center text-lg md:text-4xl font-bold">{title}</h2>
-        <p className="text-lg italic">{description}</p>
-        <div className="h-16 w-16">
-          <Image
-            alt="image"
-            src={src}
-            className="object-cover h-full w-full rounded-full"
-            height={50}
-            width={50}
-          />
+          <h2 className="text-center text-lg md:text-4xl font-bold">{title}</h2>
+          <p className="text-lg italic">{description}</p>
+          <div className="h-16 w-16">
+            <Image
+              alt="image"
+              src={src}
+              className="object-cover h-full w-full rounded-full"
+              height={50}
+              width={50}
+            />
+          </div>
         </div>
       </motion.div>
     </div>
