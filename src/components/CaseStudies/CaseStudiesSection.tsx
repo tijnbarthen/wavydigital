@@ -52,7 +52,7 @@ const HorizontalScrollCarousel = () => {
               WhyUs={false}
             />
 
-            <motion.div style={{ x }} className="flex gap-24 md:gap-32 pt-32">
+            <motion.div style={{ x }} className="flex gap-8 pt-40">
               {cases.slice(0, 5).map((caseStudy) => {
                 return (
                   <CaseStudyCard caseStudy={caseStudy} key={caseStudy.id} />

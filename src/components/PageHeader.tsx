@@ -21,7 +21,7 @@ const PageHeader = ({
   title,
   subtitle,
   description,
-  showSubtitle,
+  showSubtitle = true,
 }: HeaderProps) => {
   return (
     <div className="flex flex-col space-y-10 md:space-y-0 md:flex-row ">
