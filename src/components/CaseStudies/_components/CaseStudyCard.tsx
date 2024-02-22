@@ -2,28 +2,30 @@
 
 import { Card } from "../../ui/card";
 import { Badge } from "../../ui/badge";
-import { Button } from "../../ui/button";
+import { Button, buttonVariants } from "../../ui/button";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Case } from "@/app/cases/cases";
+import Link from "next/link";
 
 const CaseStudyCard = ({
-  image,
+  caseStudy,
   className,
-  ownProject,
 }: {
-  image?: string;
+  caseStudy: Case;
   className?: string;
-  ownProject?: boolean;
 }) => {
+  const { title, subtitle, skills, images, slug } = caseStudy;
   return (
     <motion.div
+      className="flex"
       // initial={{ y: 100, opacity: 0 }} // Start off-screen to the left
       whileInView={{ y: 0, opacity: 1 }} // End at its final position, fully opaque
       viewport={{ once: true, amount: 0.4 }} // Configure when the animation triggers
     >
       <Card
         className={cn(
-          " bg-secondary p-4 border-none dark:border-2 dark:border-primary w-[350px] md:w-[500px] relative",
+          " bg-secondary p-4 border-none dark:border-2 dark:border-primary w-[350px] md:w-[500px] relative ",
           className
         )}
       >
@@ -32,39 +34,33 @@ const CaseStudyCard = ({
         </Badge> */}
         <div className="flex justify-center">
           <img
-            src={image || "/gigBezorgd.webp"}
+            src={images[0]}
             alt="Preview of GiG Bezorgd Case Study"
-            className="hover:grow h-[50vh] md:h-96 w-[50vw] md:w-96 object-contain"
+            className="hover:grow h-[50vh] md:h-96 w-[50vw] md:w-96 object-contain transition-all duration-1000"
           />
         </div>
         <div className="flex flex-row justify-between">
-          <div className="flex flex-col gap-4">
-            <h3 className="text-xl font-bold">GiG Bezorgd</h3>
-            <p className="text-lg tracking-tight md:text-xl font-medium">
-              A self-service platform for GiG to manage their direct to consumer
-              delivery service.
-            </p>
+          <div className="flex flex-col">
             <div className="flex flex-row flex-wrap gap-2">
-              <Badge className="mt-1 py-1 px-3 text-sm">React</Badge>
-              <Badge className="mt-1 py-1 px-3 text-sm">React</Badge>
-              <Badge className="mt-1 py-1 px-3 text-sm">React</Badge>
-              <Badge className="mt-1 py-1 px-3 text-sm">React</Badge>
+              {skills.map((skill, index) => (
+                <Badge key={index}>{skill}</Badge>
+              ))}
             </div>
-          </div>
-          <div className="self-end">
-            <Button variant={"default"}>Read Case Study</Button>
-            {/* <motion.div
-              whileHover={{
-                scale: 1.05,
-                borderColor: "#f9a8d4",
-                borderWidth: 4,
-                borderRadius: "15px",
-              }}
-              transition={{ duration: 0.3 }}
-              className="mt-4 rounded-2xl "
-            >
-              <Button variant={"default"}>Read Case Study</Button>
-            </motion.div> */}
+            <div className="mt-2 h-24">
+              <h3 className="text-xl font-bold">{title}</h3>
+              <p className="text-lg tracking-tight font-medium">{subtitle}</p>
+            </div>
+            <div>
+              <Link
+                href={`/cases/${slug}`}
+                className={buttonVariants({
+                  variant: "default",
+                  className: "mt-2",
+                })}
+              >
+                Read Case Study
+              </Link>
+            </div>
           </div>
         </div>
       </Card>

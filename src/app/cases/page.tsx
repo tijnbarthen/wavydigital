@@ -2,6 +2,7 @@ import CaseStudiesSection from "@/components/CaseStudies/CaseStudiesSection";
 import CaseStudyCard from "@/components/CaseStudies/_components/CaseStudyCard";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import PageHeader from "@/components/PageHeader";
+import cases from "./cases";
 
 const CasesPage = () => {
   return (
@@ -11,9 +12,13 @@ const CasesPage = () => {
           title="Cases."
           description="All the projects we have worked on. From design to development, we have done it all."
         />
-        <div className="grid grid-cols-2 gap-4 mt-12">
-          {[...Array(9)].map((_, i) => (
-            <CaseStudyCard className="md:w-full" key={i} />
+        <div className="grid grid-cols-2 gap-4 mt-12 items-stretch">
+          {cases.map((caseStudy) => (
+            <CaseStudyCard
+              caseStudy={caseStudy}
+              className="md:w-full"
+              key={caseStudy.id}
+            />
           ))}
         </div>
       </MaxWidthWrapper>

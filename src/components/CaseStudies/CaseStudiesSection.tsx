@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 import { TextGenerateEffect } from "../TextGenerateEffect";
 import TextGradientScroll from "../TextGradientScroll";
 import { useInView } from "react-intersection-observer";
+import cases from "@/app/cases/cases";
 
 const Example = () => {
   return <HorizontalScrollCarousel />;
@@ -52,8 +53,10 @@ const HorizontalScrollCarousel = () => {
             />
 
             <motion.div style={{ x }} className="flex gap-24 md:gap-32 pt-32">
-              {cards.map((card) => {
-                return <CaseStudyCard key={card.id} />;
+              {cases.slice(0, 5).map((caseStudy) => {
+                return (
+                  <CaseStudyCard caseStudy={caseStudy} key={caseStudy.id} />
+                );
               })}
             </motion.div>
           </div>

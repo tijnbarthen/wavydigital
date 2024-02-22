@@ -9,10 +9,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import cases from "../cases";
 
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 const CaseStudyPage = ({ params: { slug } }: { params: { slug: string } }) => {
+  const caseStudy = cases.find((c) => c.slug === slug);
+
+  if (!caseStudy) {
+    return notFound();
+  }
+
   return (
     <MaxWidthWrapper className="py-8">
       <div className="mx-auto">
@@ -27,39 +35,35 @@ const CaseStudyPage = ({ params: { slug } }: { params: { slug: string } }) => {
               <span className="text-gray-500">/</span>
             </li>
             <li aria-current="page" className="text-gray-500">
-              GiG Bezorgd
+              {caseStudy.title}
             </li>
           </ol>
         </nav>
         <section className="mt-4 grid grid-cols-6 gap-x-10">
           <div className=" col-span-6 md:col-span-4">
             <h1 className="font-extrabold tracking-tight text-5xl md:text-6xl">
-              GiG Bezorgd
+              {caseStudy.title}
             </h1>
             <p className="text-lg md:text-xl font-semibold mt-4 max-w-lg">
-              A self-service platform for GiG to manage their direct to consumer
-              delivery service. The platform is designed to be simple and easy.
-              All the orders are automatically synced with their delivery
-              system.
+              {caseStudy.subtitle}
             </p>
           </div>
           <div className="col-span-6 md:col-span-2 mt-8 md:mt-0">
             <div className="flex flex-col md:justify-end flex-wrap md:text-end">
               <h3 className="text-lg md:text-xl font-semibold">Skills</h3>
               <div className="mt-1 flex gap-2 md:justify-end flex-wrap">
-                <Badge className="mt-1 py-1 px-3 text-sm">React</Badge>
-                <Badge className="mt-1 py-1 px-3 text-sm">TailwindCSS</Badge>
-                <Badge className="mt-1 py-1 px-3 text-sm">NodeJS</Badge>
-                <Badge className="mt-1 py-1 px-3 text-sm">GraphQL</Badge>
+                {caseStudy.skills.map((skill, index) => (
+                  <Badge className="mt-1 py-1 px-3 text-sm">{skill}</Badge>
+                ))}
               </div>
             </div>
             <div className="flex flex-col md:justify-end flex-wrap md:text-end mt-2">
               <h3 className="text-lg md:text-xl font-semibold">Client</h3>
-              <p className="mt-1 text-lg text-gray-600">GiG Hard Seltzer</p>
+              <p className="mt-1 text-lg text-gray-600">{caseStudy.client}</p>
             </div>
             <div className="flex flex-col md:justify-end flex-wrap md:text-end mt-2">
               <h3 className="text-lg md:text-xl font-semibold">Year</h3>
-              <p className="mt-1 text-lg text-gray-600">2022</p>
+              <p className="mt-1 text-lg text-gray-600">{caseStudy.year}</p>
             </div>
           </div>
         </section>
@@ -71,13 +75,13 @@ const CaseStudyPage = ({ params: { slug } }: { params: { slug: string } }) => {
           }}
         >
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+            {caseStudy.images.map((image, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex aspect-square items-center justify-center p-6">
                       <img
-                        src="/gigBezorgd.webp"
+                        src={image}
                         className="h-full w-full object-cover rounded-3xl"
                         alt="Gradient Background Image"
                       />
@@ -121,9 +125,7 @@ const CaseStudyPage = ({ params: { slug } }: { params: { slug: string } }) => {
         <div className="mt-8">
           <h2 className="text-4xl font-bold">Project Description</h2>
           <p className="text-lg md:text-xl mt-4">
-            Ut nunc, dui sit sit nisl, cras velit lorem. Laoreet gravida
-            adipiscing augue sit justo elit. Mauris bibendum mattis et diam
-            tellus. Auctor mauris felis lobortis tempus.
+            {caseStudy.projectDescription}
           </p>
         </div>
         {/* <div className="mt-10">
