@@ -47,7 +47,7 @@ const HorizontalScrollCarousel = () => {
           <div className="sticky top-0 flex h-screen items-center overflow-hidden mx-auto justify-center">
             <TextGradientScroll
               paragraph="Don't just take our word for it. Explore our projects."
-              className="absolute max-w-7xl flex justify-center px-4 "
+              className="absolute max-w-7xl flex justify-start px-4 "
               WhyUs={false}
             />
 
