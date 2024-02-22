@@ -22,7 +22,7 @@ const HeroSection = () => {
   });
 
   return (
-    <MaxWidthWrapper className="py-16">
+    <MaxWidthWrapper className="">
       <PageHeader
         title="Wavy Digital."
         subtitle="Business. Savvy."

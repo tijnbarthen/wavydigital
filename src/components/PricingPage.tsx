@@ -1,5 +1,5 @@
 "use client";
-import { CheckIcon } from "lucide-react";
+import { ArrowRight, CheckIcon } from "lucide-react";
 
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -56,9 +56,9 @@ export default function PricingPage() {
   });
 
   return (
-    <div className="isolate overflow-hidden bg-gradient-to-r from-blue-500 to-purple-500">
+    <div className="isolate overflow-hidden border-y border-secondary pt-20">
       <div className="mx-auto max-w-7xl px-4 pb-96 pt-0 text-center sm:pt-0 lg:px-6">
-        <div className="mx-auto max-w-4xl text-white dark:text-secondary">
+        <FadeInStagger faster className="mx-auto max-w-4xl">
           {/* <h2 className="text-base font-semibold leading-7 text-indigo-400">
             Pricing
           </h2> */}
@@ -67,14 +67,16 @@ export default function PricingPage() {
             className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl"
             WhyUs={false}
           /> */}
-          <p className="text-4xl md:text-7xl font-bold tracking-tighter ">
-            The right price for you.{" "}
-            <br className="hidden sm:inline lg:hidden" />
-            Whoever you are
-          </p>
-        </div>
+          <FadeIn>
+            <p className="text-3xl md:text-6xl font-bold tracking-tighter ">
+              The right price for you.{" "}
+              <br className="hidden sm:inline lg:hidden" />
+              Whoever you are
+            </p>
+          </FadeIn>
+        </FadeInStagger>
         <div className="relative mt-6">
-          <p className="mx-auto max-w-2xl text-lg leading-8 text-muted">
+          <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
             numquam eligendi quos odit doloribus molestiae voluptatum.
           </p>
@@ -128,12 +130,17 @@ export default function PricingPage() {
                     <Button
                       variant="outline"
                       size={"lg"}
-                      className=" mt-6 rounded-full text-secondary hover:text-secondary font-bold text-base gap-2 group bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-80"
+                      className=" mt-6 rounded-full  font-bold text-base gap-2 group bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-80"
+                      onClick={() => {
+                        const contactSection =
+                          document.getElementById("contact");
+                        if (contactSection) {
+                          contactSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
                     >
                       Schedule a call with us{" "}
-                      <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                      </span>
+                      <ArrowRight className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none" />
                     </Button>
 
                     <p className="mt-6 text-base font-bold leading-7 ">
