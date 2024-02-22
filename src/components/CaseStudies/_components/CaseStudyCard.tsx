@@ -27,9 +27,9 @@ const CaseStudyCard = ({
           className
         )}
       >
-        <Badge variant={"secondary"} className="absolute top-4 right-4">
+        {/* <Badge variant={"secondary"} className="absolute top-4 right-4">
           {ownProject ? "Own Project" : "Client Project"}
-        </Badge>
+        </Badge> */}
         <div className="flex justify-center">
           <img
             src={image || "/gigBezorgd.webp"}
@@ -38,10 +38,17 @@ const CaseStudyCard = ({
           />
         </div>
         <div className="flex flex-row justify-between">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <h3 className="text-xl font-bold">GiG Bezorgd</h3>
-            <div>
-              <Badge variant={"outline"}>UI/UX Design</Badge>
+            <p className="text-lg tracking-tight md:text-xl font-medium">
+              A self-service platform for GiG to manage their direct to consumer
+              delivery service.
+            </p>
+            <div className="flex flex-row flex-wrap gap-2">
+              <Badge className="mt-1 py-1 px-3 text-sm">React</Badge>
+              <Badge className="mt-1 py-1 px-3 text-sm">React</Badge>
+              <Badge className="mt-1 py-1 px-3 text-sm">React</Badge>
+              <Badge className="mt-1 py-1 px-3 text-sm">React</Badge>
             </div>
           </div>
           <div className="self-end">

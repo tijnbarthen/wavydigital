@@ -11,7 +11,7 @@ const CasesPage = () => {
           title="Cases."
           description="All the projects we have worked on. From design to development, we have done it all."
         />
-        <div className="grid grid-cols-3 gap-4 mt-12">
+        <div className="grid grid-cols-2 gap-4 mt-12">
           {[...Array(9)].map((_, i) => (
             <CaseStudyCard className="md:w-full" key={i} />
           ))}

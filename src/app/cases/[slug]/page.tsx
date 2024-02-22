@@ -1,13 +1,14 @@
 import { BentoGrid, BentoGridItem } from "@/components/BentoGrid";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import {
-  ArrowLeftIcon,
-  BookMarkedIcon,
-  ClipboardIcon,
-  FileSignature,
-  TablePropertiesIcon,
-} from "lucide-react";
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 import Link from "next/link";
 
@@ -62,12 +63,39 @@ const CaseStudyPage = ({ params: { slug } }: { params: { slug: string } }) => {
             </div>
           </div>
         </section>
+        <Carousel
+          className="w-full py-8 "
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent>
+            {Array.from({ length: 5 }).map((_, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <img
+                        src="/gigBezorgd.webp"
+                        className="h-full w-full object-cover rounded-3xl"
+                        alt="Gradient Background Image"
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="ml-16" />
+          <CarouselNext className="mr-16" />
+        </Carousel>
 
-        <div className="grid grid-cols-3 gap-4 mt-8">
+        {/* <div className="grid grid-cols-3 gap-4 mt-8">
           <div className="col-span-2">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1638742385167-96fc60e12f59?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/gigBezorgd.webp"
                 className="h-full w-full object-cover rounded-3xl"
                 alt="Gradient Background Image"
               />
@@ -76,20 +104,20 @@ const CaseStudyPage = ({ params: { slug } }: { params: { slug: string } }) => {
           <div className="flex flex-col gap-4">
             <div className="relative col-span-1">
               <img
-                src="https://images.unsplash.com/photo-1638742385167-96fc60e12f59?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/gigDesktopFlipped .webp"
                 className="h-full w-full object-cover rounded-3xl"
                 alt="Gradient Background Image"
               />
             </div>
             <div className="relative col-span-1">
               <img
-                src="https://images.unsplash.com/photo-1638742385167-96fc60e12f59?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/gigMobile.webp"
                 className="h-full w-full object-cover rounded-3xl"
                 alt="Gradient Background Image"
               />
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="mt-8">
           <h2 className="text-4xl font-bold">Project Description</h2>
           <p className="text-lg md:text-xl mt-4">
