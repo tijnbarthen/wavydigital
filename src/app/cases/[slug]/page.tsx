@@ -33,7 +33,7 @@ const CaseStudyPage = ({ params: { slug } }: { params: { slug: string } }) => {
         </nav>
         <section className="mt-4 grid grid-cols-6 gap-x-10">
           <div className=" col-span-6 md:col-span-4">
-            <h1 className="text-6xl md:text-7xl font-extrabold tracking-tighter">
+            <h1 className="font-extrabold tracking-tight text-5xl md:text-6xl">
               GiG Bezorgd
             </h1>
             <p className="text-lg md:text-xl font-semibold mt-4 max-w-lg">
