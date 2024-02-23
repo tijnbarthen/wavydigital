@@ -86,9 +86,9 @@ const cases: Case[] = [
   },
   {
     id: 6,
-    title: "The Pet Show Website / Image Generation & Order Automation",
+    title: "The Pet Show Website",
     subtitle: "Effortless pet show management.",
-    skills: ["Shopify", "Next.js", "Express.JS", "Multiple Fulfillment API's"],
+    skills: ["Shopify", "Next.js", "Express.JS"],
     client: "The Pet Show",
     year: "2024",
     images: [

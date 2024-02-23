@@ -7,13 +7,13 @@ import cases from "./cases";
 const CasesPage = () => {
   return (
     <>
-      <MaxWidthWrapper className="py-16">
+      <MaxWidthWrapper className="pt-16 md:pb-0">
         <PageHeader
           title="Cases."
           showSubtitle={false}
           description="All the projects we have worked on. From design to development, we have done it all."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-12 items-stretch">
           {cases.map((caseStudy) => (
             <CaseStudyCard
               caseStudy={caseStudy}

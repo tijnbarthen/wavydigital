@@ -25,7 +25,7 @@ const CaseStudyCard = ({
     >
       <Card
         className={cn(
-          " bg-secondary p-4 border-none dark:border-2 dark:border-primary ",
+          " bg-secondary p-4 border-none dark:border-2 dark:border-primary rounded-3xl",
           className
         )}
       >
