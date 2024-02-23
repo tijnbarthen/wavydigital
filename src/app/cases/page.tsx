@@ -13,11 +13,11 @@ const CasesPage = () => {
           showSubtitle={false}
           description="All the projects we have worked on. From design to development, we have done it all."
         />
-        <div className="grid grid-cols-2 gap-4 mt-12 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12 items-stretch">
           {cases.map((caseStudy) => (
             <CaseStudyCard
               caseStudy={caseStudy}
-              className="md:w-full"
+              className="w-full col-span-2 md:col-span-1 md:w-full"
               key={caseStudy.id}
             />
           ))}

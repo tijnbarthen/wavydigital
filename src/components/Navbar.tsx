@@ -15,10 +15,7 @@ import { AnimatedHamburgerButton } from "./AnimatedHamburgerButton";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Work", href: "/work" },
-  { name: "Case Studies", href: "/case-studies" },
-  { name: "Journal", href: "/journal" },
+  { name: "Case Studies", href: "/cases" },
   { name: "Contact", href: "/contact" },
 ];
 

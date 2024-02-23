@@ -72,8 +72,8 @@ function Item({ className, title, sections }: Props) {
         </figure>
         <div className="md:w-1/2 flex flex-col space-y-16 px-4 z-10 pt-16 md:pt-0">
           {sections.map((section, index) => (
-            <div key={index} className="flex flex-col space-y-4">
-              <h3 className="text-2xl md:text-3xl font-medium tracking-tighter ">
+            <div key={index} className="flex flex-col space-y-2">
+              <h3 className="text-2xl md:text-3xl font-medium tracking-tight ">
                 {section.title}
               </h3>
               <p className="text-lg md:text-2xl tracking-tight font-medium text-muted-foreground">
@@ -89,22 +89,27 @@ function Item({ className, title, sections }: Props) {
 
 const sections1 = [
   {
-    title: "It's fast",
+    title: "We understand your business.",
     content:
-      "You'll move from the idea to a launchable web app in less than a month.",
+      "Both founders have a background in business making us the perfect partner for your project. We know how to translate your business needs into a digital product.",
   },
   {
-    title: "It's simple",
+    title: "We build fast.",
+    content:
+      "We use the latest technologies and best practices to build your product fast. We don't waste time on unnecessary features. We focus on solving business problems with speed.",
+  },
+  {
+    title: "We build simple.",
     content:
       "We help you identify the most beneficial and critical elements of your idea and turn them into an easy-to-use and beautiful product.",
   },
   {
-    title: "It's affordable",
+    title: "We build affordable.",
     content:
       "Forget the endless search for freelancers or the cost of hiring a full-time dev team. No big budgets required.",
   },
   {
-    title: "It's launchable",
+    title: "We build it ready for launch.",
     content: "You'll receive a product that is ready to launch.",
   },
 ];
@@ -112,35 +117,47 @@ const sections1 = [
 const sections2 = [
   {
     title: "Free discovery call",
-    content: "15 minutes",
+    content: "15 minutes to understand your needs.",
   },
   {
     title: "Proposal + agreement",
-    content: "2 days",
+    content: "2 days. We'll send you a proposal and an agreement.",
   },
   {
     title: "Initial prototype",
-    content: "3 days",
+    content:
+      "3 days. We'll get you something visual, so you can see it come to life.",
   },
   {
     title: "Feedback",
-    content: "1 day",
+    content:
+      "1 day. Time for you to give us feedback on the initial prototype.",
   },
   {
     title: "MVP development",
-    content: "6 days",
+    content:
+      "6 days. This is where we build the first version of your product.",
+  },
+  {
+    title: "MVP ready in 14 days. Guaranteed.",
+    content:
+      "Ready to launch. But we can also build it on a longer timeline if you prefer. We are flexible.",
   },
 ];
 
 export default function StickyScroll() {
   return (
-    <div className="md:pt-[50vh]">
+    <div className="md:pt-[60vh]">
       <Item
         title={"Why work with us?"}
         sections={sections1}
         className="md:mb-32"
       />
-      <Item title={"How do we work?"} sections={sections2} className="" />
+      <Item
+        title={"How do we work?"}
+        sections={sections2}
+        className="pt-32 lg:pt-80"
+      />
     </div>
   );
 }
