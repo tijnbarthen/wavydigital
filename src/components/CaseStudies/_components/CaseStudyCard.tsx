@@ -25,7 +25,7 @@ const CaseStudyCard = ({
     >
       <Card
         className={cn(
-          " bg-secondary p-4 border-none dark:border-2 dark:border-primary w-[350px] md:w-[500px] relative ",
+          " bg-secondary p-4 border-none dark:border-2 dark:border-primary rounded-3xl",
           className
         )}
       >
@@ -36,10 +36,10 @@ const CaseStudyCard = ({
           <img
             src={images[0]}
             alt="Preview of GiG Bezorgd Case Study"
-            className="hover:grow h-[50vh] md:h-96 w-[50vw] md:w-96 object-contain transition-all duration-1000"
+            className="hover:grow h-[30vh] md:h-96 w-[50vw] md:w-96 object-contain transition-all duration-1000"
           />
         </div>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between h-fit">
           <div className="flex flex-col">
             <div className="flex flex-row flex-wrap gap-2">
               {skills.map((skill, index) => (
@@ -50,7 +50,7 @@ const CaseStudyCard = ({
               <h3 className="text-xl font-bold">{title}</h3>
               <p className="text-lg tracking-tight font-medium">{subtitle}</p>
             </div>
-            <div>
+            <div className="mt-auto">
               <Link
                 href={`/cases/${slug}`}
                 className={buttonVariants({
@@ -61,7 +61,7 @@ const CaseStudyCard = ({
                 Read Case Study
               </Link>
             </div>
-          </div>
+          </div>{" "}
         </div>
       </Card>
     </motion.div>

@@ -70,7 +70,7 @@ const PageHeader = ({
           </h1>
         </div> */}
 
-        {/* <h1 className="from-purple-600 font-extrabold to-blue-600 bg-clip-text text-transparent bg-gradient-to-r text-6xl md:text-7xl  pb-2 tracking-tighter">
+        {/* <h1 className="from-purple-600 font-extrabold to-blue-600 bg-clip-text text-transparent bg-gradient-to-r text-6xl md:text-7xl  pb-2 tracking-tight">
           {subtitle}
         </h1> */}
       </div>

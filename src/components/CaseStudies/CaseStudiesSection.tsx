@@ -8,6 +8,8 @@ import { TextGenerateEffect } from "../TextGenerateEffect";
 import TextGradientScroll from "../TextGradientScroll";
 import { useInView } from "react-intersection-observer";
 import cases from "@/app/cases/cases";
+import Link from "next/link";
+import { buttonVariants } from "../ui/button";
 
 const Example = () => {
   return <HorizontalScrollCarousel />;
@@ -52,12 +54,27 @@ const HorizontalScrollCarousel = () => {
               WhyUs={false}
             />
 
-            <motion.div style={{ x }} className="flex gap-8 pt-40">
+            <motion.div style={{ x }} className="flex gap-4 pt-40">
               {cases.slice(0, 5).map((caseStudy) => {
                 return (
-                  <CaseStudyCard caseStudy={caseStudy} key={caseStudy.id} />
+                  <CaseStudyCard
+                    className="min-w-[500px]"
+                    caseStudy={caseStudy}
+                    key={caseStudy.id}
+                  />
                 );
               })}
+              <div className="flex justify-center items-center">
+                <Link
+                  className={buttonVariants({
+                    variant: "default",
+                    className: "mt-2 ml-32",
+                  })}
+                  href="/cases"
+                >
+                  See All Cases
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

@@ -13,7 +13,7 @@ const tiers = [
     name: "Websites",
     id: "tier-hobby",
     href: "#",
-    priceMonthly: "from €1.999",
+    priceMonthly: "From €1.999",
     description:
       "Launch or rebrand your business with a fully fledged website from us",
     features: [
@@ -68,7 +68,7 @@ export default function PricingPage() {
             WhyUs={false}
           /> */}
           <FadeIn>
-            <p className="text-3xl md:text-6xl font-bold tracking-tighter ">
+            <p className="text-3xl md:text-6xl font-bold tracking-tight ">
               The right price for you.{" "}
               <br className="hidden sm:inline lg:hidden" />
               Whoever you are
