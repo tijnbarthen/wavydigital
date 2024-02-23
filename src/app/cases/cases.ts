@@ -15,7 +15,8 @@ const cases: Case[] = [
   {
     id: 1,
     title: "GiG Bezorgd",
-    subtitle: "Streamlined direct-to-consumer delivery.",
+    subtitle:
+      "DTC E-commerce platform for GiG Hard Seltzer with automated order flow.",
     skills: ["WooCommerce", "Automation", "Cloudflare Workers", "Elementor"],
     client: "GiG Hard Seltzer",
     year: "2021",
@@ -27,7 +28,7 @@ const cases: Case[] = [
   {
     id: 2,
     title: "IFCI Register Landingpage",
-    subtitle: "Effortless registration processes.",
+    subtitle: "Landingpage for the IFCI Register.",
     skills: ["Next.js", "Airtable", "Cloudflare Workers"],
     client: "IFCI Register",
     year: "2023",
@@ -43,7 +44,8 @@ const cases: Case[] = [
   {
     id: 3,
     title: "FitCert Inspection Dynamic Landingpage",
-    subtitle: "Seamless inspection solutions.",
+    subtitle:
+      "Dynamic landingpages for all the fitness national associations in Europe.",
     skills: ["Next.js", "Airtable"],
     client: "Tüv, IFCI Register, FITCERT, Kiwa ISA Sport",
     year: "2024",
@@ -55,7 +57,7 @@ const cases: Case[] = [
   {
     id: 4,
     title: "Sunnery Sessions Website",
-    subtitle: "Immersive Sunnery Sessions experience.",
+    subtitle: "Immersive Sunnery Sessions landingpage.",
     skills: ["Next.js"],
     client: "Sunnergy Sessions",
     year: "2023",
@@ -70,8 +72,9 @@ const cases: Case[] = [
   },
   {
     id: 5,
-    title: "De Bruiloft Website & Email Marketing Automation",
-    subtitle: "Elegant wedding planning made easy.",
+    title: "De Bruiloft Website & Email",
+    subtitle:
+      "Easy landingpage for lead generation. Custom invite e-mail generated with ChatGPT for a unique experience.",
     skills: ["Next.js", "Brevo", "ChatGPT 3.5"],
     client: "GiG Hard Seltzer",
     year: "2023",
@@ -87,7 +90,8 @@ const cases: Case[] = [
   {
     id: 6,
     title: "The Pet Show Website",
-    subtitle: "Effortless pet show management.",
+    subtitle:
+      "E-commerce platform, automated AI image training/generation and order fulfillment.",
     skills: ["Shopify", "Next.js", "Express.JS"],
     client: "The Pet Show",
     year: "2024",
@@ -103,7 +107,7 @@ const cases: Case[] = [
   {
     id: 7,
     title: "Legends Leiden Website",
-    subtitle: "Discover the legends of Leiden.",
+    subtitle: "Modern website for the Legends Leiden a gym in Leiden.",
     skills: ["Next.js"],
     client: "Legends Leiden",
     year: "2022",
@@ -119,7 +123,8 @@ const cases: Case[] = [
   {
     id: 8,
     title: "Corazon Retreat Website",
-    subtitle: "Tranquil retreat exploration.",
+    subtitle:
+      "Modern website for the Corazon Retreat. A unique retreat in Ibiza.",
     skills: ["Next.js"],
     client: "Corazon Retreat",
     year: "2023",
@@ -131,7 +136,8 @@ const cases: Case[] = [
   {
     id: 9,
     title: "OntruimKiezer Platform",
-    subtitle: "Effortless evacuation management.",
+    subtitle:
+      "Platform for matching people with clearance services. Completely with user management and matching algorithm.",
     skills: ["Next.js", "Prisma", "Resend (E-mail)", "Next Auth"],
     client: "OntruimKiezer",
     year: "2024",
@@ -147,7 +153,8 @@ const cases: Case[] = [
   {
     id: 10,
     title: "Gina van Os Attelier Website & Rental Platform",
-    subtitle: "Inspiring creative space exploration.",
+    subtitle:
+      "Custom rental platform for Gina van Os Attelier. With email automation. And on request rental module.",
     skills: ["Next.js", "Resend (E-mail)", "Sanity.io"],
     client: "Gina van Os Attelier",
     year: "2024",
@@ -159,8 +166,9 @@ const cases: Case[] = [
   {
     id: 11,
     title: "EventStories Website & Event Management Platform",
-    subtitle: "Unforgettable event crafting.",
-    skills: ["Next.js", "Prisma", "Resend (E-mail)", "Next Auth"],
+    subtitle:
+      "Image hosting and event management platform. Events can be created and managed in a custom dashboard.",
+    skills: ["Next.js", "Prisma", "Resend (E-mail)", "Next Auth", "AWS"],
     client: "EventStories",
     year: "2023",
     images: [
@@ -175,7 +183,7 @@ const cases: Case[] = [
   {
     id: 12,
     title: "Linden Vastgoed Website",
-    subtitle: "Navigate real estate ventures.",
+    subtitle: "Modern real estate website. Connected to Airtable.",
     skills: ["Next.js", "Airtable"],
     client: "GiG Hard Seltzer",
     year: "2023",
@@ -191,7 +199,8 @@ const cases: Case[] = [
   {
     id: 13,
     title: "ByHyre Website & Back Office",
-    subtitle: "Empower hiring processes.",
+    subtitle:
+      "Modern website for ByHyre. Connected to Strapi for content management and page building.",
     skills: ["Next.js", "Strapi"],
     client: "GiG Hard Seltzer",
     year: "2023",
@@ -207,7 +216,8 @@ const cases: Case[] = [
   {
     id: 14,
     title: "Lokers Real Estate Website & WhatsApp Automation",
-    subtitle: "Modern real estate transactions.",
+    subtitle:
+      "Modern real estate website. Connected to Airtable and with Whatsapp automations. ",
     skills: ["Next.js", "Automation", "Cloudflare Workers"],
     client: "Lokers Real Estate",
     year: "2023",

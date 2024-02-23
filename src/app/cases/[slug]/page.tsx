@@ -44,28 +44,39 @@ const CaseStudyPage = ({ params: { slug } }: { params: { slug: string } }) => {
             <h1 className="font-extrabold tracking-tight text-5xl md:text-6xl">
               {caseStudy.title}
             </h1>
+
             <p className="text-lg md:text-xl font-semibold mt-4 max-w-lg">
               {caseStudy.subtitle}
             </p>
           </div>
           <div className="col-span-6 md:col-span-2 mt-8 md:mt-0">
             <div className="flex flex-col md:justify-end flex-wrap md:text-end">
-              <h3 className="text-lg md:text-xl font-semibold">Skills</h3>
+              <h3 className="text-lg md:text-lg font-semibold">Build With</h3>
               <div className="mt-1 flex gap-2 md:justify-end flex-wrap">
                 {caseStudy.skills.map((skill, index) => (
-                  <Badge key={index} className="mt-1 py-1 px-3 text-sm">
-                    {skill}
-                  </Badge>
+                  <Badge key={index}>{skill}</Badge>
                 ))}
               </div>
             </div>
             <div className="flex flex-col md:justify-end flex-wrap md:text-end mt-2">
-              <h3 className="text-lg md:text-xl font-semibold">Client</h3>
+              <h3 className="text-lg md:text-lg font-semibold">Client</h3>
               <p className="mt-1 text-lg text-gray-600">{caseStudy.client}</p>
             </div>
-            <div className="flex flex-col md:justify-end flex-wrap md:text-end mt-2">
-              <h3 className="text-lg md:text-xl font-semibold">Year</h3>
+            <div className="flex flex-col md:justify-end flex-wrap md:text-end mt-1">
+              <h3 className="text-lg md:text-lg font-semibold">Year</h3>
               <p className="mt-1 text-lg text-gray-600">{caseStudy.year}</p>
+            </div>
+            <div className="flex flex-col md:justify-end flex-wrap md:text-end mt-1">
+              <h3 className="text-lg md:text-lg font-semibold ">
+                Visit project
+              </h3>
+              <a
+                href={caseStudy.project_url}
+                target="_blank"
+                className="mt-1 text-lg  underline from-blue-600 w-fit to-purple-600 bg-clip-text text-transparent bg-gradient-to-r self-end "
+              >
+                {caseStudy.project_url}
+              </a>
             </div>
           </div>
         </section>
